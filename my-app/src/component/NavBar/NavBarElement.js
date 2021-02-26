@@ -11,6 +11,7 @@ export const NavbarContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 50;
 `;
 // @media screen and (max-width: 960px) {
 //   transition: 0.8s all ease;
