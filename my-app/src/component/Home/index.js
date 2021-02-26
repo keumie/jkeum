@@ -1,0 +1,45 @@
+import React, { useState } from "react";
+import Typography from "@material-ui/core/Typography";
+import Video from "../../video/video.mp4";
+import { Button } from "../ButtonElement";
+import {
+  HomeContainer,
+  HomeBg,
+  VideoBg,
+  HomeContent,
+  HomeH1,
+  HomeP,
+  HomeBtnWrapper,
+  ArrowRight,
+  ArrowDown,
+} from "./HomeElement";
+
+const Main = () => {
+  const [hover, setHover] = useState(false);
+
+  const onHover = () => {
+    setHover(!hover);
+  };
+
+  return (
+    <HomeContainer>
+      <HomeBg>
+        <VideoBg autoPlay loop muted src={Video} type="videos/mp4" />
+      </HomeBg>
+      <HomeContent>
+        <HomeH1>
+          WELCOME TO MY WEBSITE <br /> MY NAME IS JOEY KEUM
+        </HomeH1>
+        <HomeP>I am a new graduate looking for work</HomeP>
+        <HomeBtnWrapper>
+          <Button to="signup" onMouseEnter={onHover} onMouseLeave={onHover}>
+            <Typography>Get Started</Typography>
+            {hover ? <ArrowDown /> : <ArrowRight />}
+          </Button>
+        </HomeBtnWrapper>
+      </HomeContent>
+    </HomeContainer>
+  );
+};
+
+export default Main;
