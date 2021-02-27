@@ -12,13 +12,13 @@ import {
 const NavBar = (props) => {
   return (
     <NavbarContainer>
-      <NavLogo to="home">Joey Keum</NavLogo>
+      <NavLogo to="home">JOEY KEUM</NavLogo>
       <Typography>
         <NavMenu>
-          <NavLinks to="about">About</NavLinks>
-          <NavLinks to="experience">Experience</NavLinks>
-          <NavLinks to="project">Projects</NavLinks>
-          <NavLinks to="game">Game</NavLinks>
+          <NavLinks to="about">about</NavLinks>
+          <NavLinks to="experience">experience</NavLinks>
+          <NavLinks to="project">projects</NavLinks>
+          <NavLinks to="game">game</NavLinks>
         </NavMenu>
       </Typography>
       <MobileIcon onClick={props.toggle}>

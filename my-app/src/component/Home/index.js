@@ -30,7 +30,7 @@ const Main = () => {
         <HomeH1>
           WELCOME TO MY WEBSITE <br /> MY NAME IS JOEY KEUM
         </HomeH1>
-        <HomeP>I am a new graduate looking for work</HomeP>
+        <HomeP>I am a new graduate ready to tackle the world</HomeP>
         <HomeBtnWrapper>
           <Button to="signup" onMouseEnter={onHover} onMouseLeave={onHover}>
             <Typography>Get Started</Typography>
