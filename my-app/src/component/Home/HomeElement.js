@@ -50,6 +50,7 @@ export const HomeH1 = styled.h1`
   color: white;
   font-size: 48px;
   text-align: center;
+  display: inline;
 
   @media screen and (max-width: 768px) {
     font-size: 40px;
@@ -57,6 +58,11 @@ export const HomeH1 = styled.h1`
   @media screen and (max-width: 480px) {
     font-size: 32px;
   }
+`;
+
+export const HomeName = styled.div`
+  display: inline;
+  color: orange;
 `;
 
 export const HomeP = styled.p`
@@ -78,9 +84,9 @@ export const HomeBtnWrapper = styled.div`
   margin-top: 32px;
   display: flex;
   flex-direction: column;
+  color: black;
   align-items: center;
   & hover : {
-    color: black;
     transition: 0.3s ease-in-out;
   }
 `;

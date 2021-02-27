@@ -8,6 +8,7 @@ import {
   VideoBg,
   HomeContent,
   HomeH1,
+  HomeName,
   HomeP,
   HomeBtnWrapper,
   ArrowRight,
@@ -28,7 +29,8 @@ const Main = () => {
       </HomeBg>
       <HomeContent>
         <HomeH1>
-          WELCOME TO MY WEBSITE <br /> MY NAME IS JOEY KEUM
+          WELCOME TO MY WEBSITE <br /> MY NAME IS
+          <HomeName> JOEY KEUM</HomeName>
         </HomeH1>
         <HomeP>I am a new graduate ready to tackle the world</HomeP>
         <HomeBtnWrapper>
