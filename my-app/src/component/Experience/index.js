@@ -10,7 +10,7 @@ import {
   ExperienceLogo,
   EInfoTitle,
   EInfoSub,
-  ExperienceInfoContainer,
+  EInfoDesc,
 } from "./ExperienceElement";
 
 const Experience = () => {
@@ -31,7 +31,7 @@ const Experience = () => {
         >
           <EInfoTitle>Software Developer</EInfoTitle>
           <EInfoSub>Internship</EInfoSub>
-          <Grid>Some Description</Grid>
+          <EInfoDesc>React, Redux, Javascript, HTML, CSS</EInfoDesc>
         </Grid>
         <Grid
           item
@@ -41,9 +41,9 @@ const Experience = () => {
           justify="center"
           alignItems="flex-end"
         >
-          <EInfoTitle>Software Developer</EInfoTitle>
+          <EInfoTitle>Web Developer</EInfoTitle>
           <EInfoSub>Internship</EInfoSub>
-          <Grid>Some Description</Grid>
+          <EInfoDesc>Javascript, HTML, CSS, Magento</EInfoDesc>
         </Grid>
         <Grid item xs={6} container justify="flex-start">
           <ExperienceLogo src={atologo} />
@@ -59,9 +59,9 @@ const Experience = () => {
           justify="center"
           alignItems="flex-start"
         >
-          <EInfoTitle>Software Developer</EInfoTitle>
+          <EInfoTitle>Application Developer</EInfoTitle>
           <EInfoSub>Internship</EInfoSub>
-          <Grid>Some Description</Grid>
+          <EInfoDesc>Java, Business Object, Excel </EInfoDesc>
         </Grid>
         <Grid
           item
@@ -71,9 +71,9 @@ const Experience = () => {
           justify="center"
           alignItems="flex-end"
         >
-          <EInfoTitle>Software Developer</EInfoTitle>
+          <EInfoTitle>Mobile Developer</EInfoTitle>
           <EInfoSub>Internship</EInfoSub>
-          <Grid>Some Description</Grid>
+          <EInfoDesc>jQuery, Javascript, HTML, CSS</EInfoDesc>
         </Grid>
         <Grid item xs={6} container justify="flex-start">
           <ExperienceLogo src={wmlogo} />

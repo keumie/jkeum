@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Link as LinkS } from "react-scroll";
 
 export const ExperienceContainer = styled.div`
-  padding: 40px 25%;
+  padding: 40px 10%;
   @media screen and (max-width: 768px) {
     padding: 20px 20px;
   }
@@ -58,7 +58,7 @@ export const ExperienceInfoContainer = styled.div`
 `;
 
 export const EInfoTitle = styled.div`
-  color: white;
+  color: #fdd86a;
   font-size: 20px;
   padding: 0px 10px;
 `;
@@ -69,6 +69,7 @@ export const EInfoSub = styled.div`
   padding: 0px 10px;
 `;
 
-export const EInfoSubSub = styled.div`
-  color: black;
+export const EInfoDesc = styled.div`
+  color: white;
+  padding: 10px;
 `;
