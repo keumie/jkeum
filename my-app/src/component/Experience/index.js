@@ -3,10 +3,18 @@ import { Grid } from "@material-ui/core";
 import bgrslogo from "../../images/bgrslogo.jpg";
 import atologo from "../../images/atologo.jpg";
 import rbhlogo from "../../images/rbhlogo.png";
+
+import { makeStyles } from "@material-ui/core/styles";
 import wmlogo from "../../images/wmlogo.jpg";
 import { withStyles } from "@material-ui/core/styles";
 import ExperienceModal from "./ExperienceModal";
+import Card from "@material-ui/core/Card";
+import CardActionArea from "@material-ui/core/CardActionArea";
+import CardActions from "@material-ui/core/CardActions";
+import CardContent from "@material-ui/core/CardContent";
+import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
+import Typography from "@material-ui/core/Typography";
 import {
   ExperienceContainer,
   ExperienceHeader,
@@ -22,6 +30,12 @@ const ColorButton = withStyles((theme) => ({
   },
 }))(Button);
 
+const useStyles = makeStyles({
+  root: {
+    maxWidth: 345,
+  },
+});
+
 const Experience = () => {
   const [open, setOpen] = useState(false);
 
@@ -33,6 +47,24 @@ const Experience = () => {
     setOpen(false);
   };
 
+  const styles = {
+    media: {
+      height: "100px",
+      paddingTop: "56.25%", // 16:9
+    },
+    card: {
+      position: "relative",
+    },
+    overlay: {
+      position: "absolute",
+      top: "20px",
+      left: "20px",
+      color: "black",
+      backgroundColor: "white",
+    },
+  };
+  const classes = useStyles();
+
   return (
     <ExperienceContainer>
       <ExperienceHeader>experience</ExperienceHeader>
@@ -42,66 +74,144 @@ const Experience = () => {
         handleClickOpen={handleClickOpen}
         handleClose={handleClose}
       />
-      <Grid container>
-        <Grid item xs={6} container justify="flex-end">
+      {/* <Grid container spacing={2}>
+        <Grid item xs={3}>
           <ExperienceLogo src={bgrslogo} />
         </Grid>
-        <Grid
-          item
-          xs={6}
-          container
-          direction="column"
-          justify="center"
-          alignItems="flex-start"
-        >
-          <EInfoTitle>Software Developer</EInfoTitle>
-          <EInfoSub>Internship</EInfoSub>
-          <EInfoDesc>React, Redux, Javascript, HTML, CSS</EInfoDesc>
-        </Grid>
-        <Grid
-          item
-          xs={6}
-          container
-          direction="column"
-          justify="center"
-          alignItems="flex-end"
-        >
-          <EInfoTitle>Web Developer</EInfoTitle>
-          <EInfoSub>Internship</EInfoSub>
-          <EInfoDesc>Javascript, HTML, CSS, Magento</EInfoDesc>
-        </Grid>
-        <Grid item xs={6} container justify="flex-start">
+        <Grid item xs={3}>
           <ExperienceLogo src={atologo} />
         </Grid>
-        <Grid item xs={6} container justify="flex-end">
+        <Grid item xs={3}>
           <ExperienceLogo src={rbhlogo} />
         </Grid>
-        <Grid
-          item
-          xs={6}
-          container
-          direction="column"
-          justify="center"
-          alignItems="flex-start"
-        >
-          <EInfoTitle>Application Developer</EInfoTitle>
-          <EInfoSub>Internship</EInfoSub>
-          <EInfoDesc>Java, Business Object, Excel </EInfoDesc>
-        </Grid>
-        <Grid
-          item
-          xs={6}
-          container
-          direction="column"
-          justify="center"
-          alignItems="flex-end"
-        >
-          <EInfoTitle>Mobile Developer</EInfoTitle>
-          <EInfoSub>Internship</EInfoSub>
-          <EInfoDesc>jQuery, Javascript, HTML, CSS</EInfoDesc>
-        </Grid>
-        <Grid item xs={6} container justify="flex-start">
+        <Grid item xs={3}>
           <ExperienceLogo src={wmlogo} />
+        </Grid>
+      </Grid> */}
+      <Grid container spacing={2}>
+        <Grid item xs={3}>
+          <Card className={classes.root}>
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                alt="BGRS"
+                max-width="200px"
+                height="auto"
+                src={bgrslogo}
+                title="BGRS"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                  Lizard
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  Lizards are a widespread group of squamate reptiles, with over
+                  6,000 species, ranging across all continents except Antarctica
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+              <Button size="small" color="primary">
+                Share
+              </Button>
+              <Button size="small" color="primary">
+                Learn More
+              </Button>
+            </CardActions>
+          </Card>
+        </Grid>
+        <Grid item xs={3}>
+          <Card className={classes.root}>
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                alt="ATO"
+                max-width="200px"
+                height="auto"
+                src={atologo}
+                title="ATO"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                  Lizard
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  Lizards are a widespread group of squamate reptiles, with over
+                  6,000 species, ranging across all continents except Antarctica
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+              <Button size="small" color="primary">
+                Share
+              </Button>
+              <Button size="small" color="primary">
+                Learn More
+              </Button>
+            </CardActions>
+          </Card>
+        </Grid>
+        <Grid item xs={3}>
+          <Card className={classes.root}>
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                alt="RBH"
+                max-width="200px"
+                height="auto"
+                src={rbhlogo}
+                title="RBH"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                  Lizard
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  Lizards are a widespread group of squamate reptiles, with over
+                  6,000 species, ranging across all continents except Antarctica
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+              <Button size="small" color="primary">
+                Share
+              </Button>
+              <Button size="small" color="primary">
+                Learn More
+              </Button>
+            </CardActions>
+          </Card>
+        </Grid>
+        <Grid item xs={3}>
+          <Card className={classes.root}>
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                alt="WM"
+                max-width="200px"
+                height="auto"
+                src={wmlogo}
+                title="WM"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                  Lizard
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  Lizards are a widespread group of squamate reptiles, with over
+                  6,000 species, ranging across all continents except Antarctica
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+              <Button size="small" color="primary">
+                Share
+              </Button>
+              <Button size="small" color="primary">
+                Learn More
+              </Button>
+            </CardActions>
+          </Card>
         </Grid>
       </Grid>
     </ExperienceContainer>

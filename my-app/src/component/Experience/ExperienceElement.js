@@ -50,6 +50,13 @@ export const ExperienceLogo = styled.img.attrs((props) => ({
   width: 100%;
   max-width: 200px;
   height: auto;
+  border-radius: 20px;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    opacity: 0.2;
+    transform: scale(1.1);
+  }
 `;
 
 export const ExperienceInfoContainer = styled.div`
