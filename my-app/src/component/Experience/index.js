@@ -7,6 +7,7 @@ import wmlogo from "../../images/wmlogo.jpg";
 import { withStyles } from "@material-ui/core/styles";
 import ExperienceModal from "./ExperienceModal";
 import Button from "@material-ui/core/Button";
+import CustomCard from "./CustomCard";
 import {
   ExperienceContainer,
   ExperienceHeader,
@@ -36,6 +37,7 @@ const Experience = () => {
   return (
     <ExperienceContainer>
       <ExperienceHeader>experience</ExperienceHeader>
+      <CustomCard />
       <ColorButton onClick={handleClickOpen}>Open dialog</ColorButton>
       <ExperienceModal
         open={open}
