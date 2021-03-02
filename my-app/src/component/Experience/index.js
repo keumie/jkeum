@@ -37,73 +37,24 @@ const Experience = () => {
   return (
     <ExperienceContainer>
       <ExperienceHeader>experience</ExperienceHeader>
-      <CustomCard />
       <ColorButton onClick={handleClickOpen}>Open dialog</ColorButton>
       <ExperienceModal
         open={open}
         handleClickOpen={handleClickOpen}
         handleClose={handleClose}
       />
-      <Grid container>
-        <Grid item xs={6} container justify="flex-end">
-          <ExperienceLogo src={bgrslogo} />
+      <Grid container spacing={2}>
+        <Grid item xs={12}>
+          <CustomCard />
         </Grid>
-        <Grid
-          item
-          xs={6}
-          container
-          direction="column"
-          justify="center"
-          alignItems="flex-start"
-        >
-          <EInfoTitle>Software Developer</EInfoTitle>
-          <EInfoSub>Internship</EInfoSub>
-          <EInfoDesc>React, Redux, Javascript, HTML, CSS</EInfoDesc>
+        <Grid item xs={12}>
+          <CustomCard />
         </Grid>
-        <Grid
-          item
-          xs={6}
-          container
-          direction="column"
-          justify="center"
-          alignItems="flex-end"
-        >
-          <EInfoTitle>Web Developer</EInfoTitle>
-          <EInfoSub>Internship</EInfoSub>
-          <EInfoDesc>Javascript, HTML, CSS, Magento</EInfoDesc>
+        <Grid item xs={12}>
+          <CustomCard />
         </Grid>
-        <Grid item xs={6} container justify="flex-start">
-          <ExperienceLogo src={atologo} />
-        </Grid>
-        <Grid item xs={6} container justify="flex-end">
-          <ExperienceLogo src={rbhlogo} />
-        </Grid>
-        <Grid
-          item
-          xs={6}
-          container
-          direction="column"
-          justify="center"
-          alignItems="flex-start"
-        >
-          <EInfoTitle>Application Developer</EInfoTitle>
-          <EInfoSub>Internship</EInfoSub>
-          <EInfoDesc>Java, Business Object, Excel </EInfoDesc>
-        </Grid>
-        <Grid
-          item
-          xs={6}
-          container
-          direction="column"
-          justify="center"
-          alignItems="flex-end"
-        >
-          <EInfoTitle>Mobile Developer</EInfoTitle>
-          <EInfoSub>Internship</EInfoSub>
-          <EInfoDesc>jQuery, Javascript, HTML, CSS</EInfoDesc>
-        </Grid>
-        <Grid item xs={6} container justify="flex-start">
-          <ExperienceLogo src={wmlogo} />
+        <Grid item xs={12}>
+          <CustomCard />
         </Grid>
       </Grid>
     </ExperienceContainer>

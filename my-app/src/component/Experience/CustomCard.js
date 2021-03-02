@@ -100,11 +100,11 @@ const boxStyle = makeStyles(({ spacing }) => {
 
 const shadowStyle = makeStyles({
   root: ({ inactive }) => ({
-    boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
+    boxShadow: "0 0 20px 0 rgba(0,0,0,0.12)",
     transition: "0.3s",
     ...(!inactive && {
       "&:hover": {
-        transform: "translateY(2px)",
+        transform: "translateY(-3px)",
         boxShadow: "0 4px 20px 0 rgba(0,0,0,0.12)",
       },
     }),
@@ -126,8 +126,8 @@ export const CustomCard = React.memo(function BlogCard() {
       <CardContent>
         <TextInfoContent
           classes={contentStyles}
-          overline={"28 MAR 2019"}
-          heading={"What is Git ?"}
+          overline={"28 MAR 2019  ~  30 MAR 2019"}
+          heading={"BGRS"}
           body={
             "Git is a distributed version control system. Every dev has a working copy of the code and..."
           }
