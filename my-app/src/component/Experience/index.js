@@ -4,6 +4,10 @@ import bgrslogo from "../../images/bgrslogo.jpg";
 import atologo from "../../images/atologo.jpg";
 import rbhlogo from "../../images/rbhlogo.png";
 import wmlogo from "../../images/wmlogo.jpg";
+import tbgrslogo from "../../images/transpbgrslogo.png";
+import tatologo from "../../images/transpatologo.png";
+import trbhlogo from "../../images/transprbhlogo.png";
+import twmlogo from "../../images/transpwmlogo.png";
 import { withStyles } from "@material-ui/core/styles";
 import ExperienceModal from "./ExperienceModal";
 import Button from "@material-ui/core/Button";
@@ -45,16 +49,36 @@ const Experience = () => {
       />
       <Grid container spacing={2}>
         <Grid item xs={12}>
-          <CustomCard />
+          <CustomCard
+            logo={tbgrslogo}
+            overline={"SEPT 2019  ~  DEC 2019  ||  JAN 2019  ~  APR 2019"}
+            heading={"BGRS"}
+            body={"asd"}
+          />
         </Grid>
         <Grid item xs={12}>
-          <CustomCard />
+          <CustomCard
+            logo={tatologo}
+            overline={"MAY 2018  ~  AUG 2018"}
+            heading={"Appliance TV Outlet"}
+            body={"asd"}
+          />
         </Grid>
         <Grid item xs={12}>
-          <CustomCard />
+          <CustomCard
+            logo={trbhlogo}
+            overline={"JAN 2015  ~  APR 2015"}
+            heading={"Rothman Bension & Hedges"}
+            body={"asd"}
+          />
         </Grid>
         <Grid item xs={12}>
-          <CustomCard />
+          <CustomCard
+            logo={twmlogo}
+            overline={"JAN 2014  ~  APR 2014"}
+            heading={"Work Market"}
+            body={"asd"}
+          />
         </Grid>
       </Grid>
     </ExperienceContainer>

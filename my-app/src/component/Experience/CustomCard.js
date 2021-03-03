@@ -32,7 +32,6 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
     width: "auto",
     height: "200px",
     marginLeft: "auto",
-    marginRight: "auto",
     marginTop: spacing(-3),
     // paddingBottom: "48%",
     borderRadius: spacing(2),
@@ -64,14 +63,14 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
     marginTop: 24,
     textTransform: "initial",
   },
-  button: {
-    backgroundImage: "linear-gradient(147deg, #fe8a39 0%, #fd3838 74%)",
-    boxShadow: "0px 4px 32px rgba(252, 56, 56, 0.4)",
-    borderRadius: 100,
-    paddingLeft: 24,
-    paddingRight: 24,
-    color: "#ffffff",
-  },
+  // button: {
+  //   backgroundImage: "linear-gradient(147deg, #fe8a39 0%, #fd3838 74%)",
+  //   boxShadow: "0px 4px 32px rgba(252, 56, 56, 0.4)",
+  //   borderRadius: 100,
+  //   paddingLeft: 24,
+  //   paddingRight: 24,
+  //   color: "#ffffff",
+  // },
 }));
 
 const boxStyle = makeStyles(({ spacing }) => {
@@ -113,7 +112,8 @@ const shadowStyle = makeStyles({
   }),
 });
 
-export const CustomCard = React.memo(function BlogCard() {
+export const CustomCard = React.memo(function BlogCard(props) {
+  console.log(props);
   const styles = useStyles();
   const contentStyles = boxStyle();
   const shadowStyles = shadowStyle();
@@ -129,7 +129,7 @@ export const CustomCard = React.memo(function BlogCard() {
             "Git is a distributed version control system. Every dev has a working copy of the code and..."
           }
         />
-        <Button className={styles.button}>Read more</Button>
+        {/* <Button className={styles.button}>Read more</Button> */}
       </CardContent>
     </Card>
   );
