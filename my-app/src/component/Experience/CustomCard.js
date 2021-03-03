@@ -6,6 +6,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import Button from "@material-ui/core/Button";
 import TextInfoContent from "./TextInfoContent";
+import bgrslogo from "../../images/transpbgrslogo.png";
 
 const useStyles = makeStyles(({ breakpoints, spacing }) => ({
   root: {
@@ -14,7 +15,7 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
     transition: "0.3s",
     boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
     position: "relative",
-    maxWidth: 500,
+    // maxWidth: 500,
     marginLeft: "auto",
     overflow: "initial",
     background: "#ffffff",
@@ -27,33 +28,37 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
       paddingTop: spacing(2),
     },
   },
+  img: {
+    objectFit: "contain",
+  },
   media: {
     width: "88%",
     marginLeft: "auto",
     marginRight: "auto",
     marginTop: spacing(-3),
-    height: 0,
     paddingBottom: "48%",
     borderRadius: spacing(2),
     backgroundColor: "#fff",
     position: "relative",
+    objectFit: "scale-down",
     [breakpoints.up("md")]: {
+      objectFit: "scale-down",
       width: "100%",
       marginLeft: spacing(-3),
       marginTop: 0,
       transform: "translateX(-8px)",
     },
-    "&:after": {
-      content: '" "',
-      position: "absolute",
-      top: 0,
-      left: 0,
-      width: "100%",
-      height: "100%",
-      backgroundImage: "linear-gradient(147deg, #fe8a39 0%, #fd3838 74%)",
-      borderRadius: spacing(2), // 16
-      opacity: 0.5,
-    },
+    // "&:after": {
+    //   content: '" "',
+    //   position: "absolute",
+    //   top: 0,
+    //   left: 0,
+    //   width: "100%",
+    //   height: "100%",
+    //   backgroundImage: "linear-gradient(147deg, #fe8a39 0%, #757575 75%)",
+    //   borderRadius: spacing(2), // 16
+    //   opacity: 0.2,
+    // },
   },
   content: {
     padding: 24,
@@ -117,12 +122,7 @@ export const CustomCard = React.memo(function BlogCard() {
   const shadowStyles = shadowStyle();
   return (
     <Card className={cx(styles.root, shadowStyles.root)}>
-      <CardMedia
-        className={styles.media}
-        image={
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/2000px-Git_icon.svg.png"
-        }
-      />
+      <CardMedia className={styles.media} image={bgrslogo} />
       <CardContent>
         <TextInfoContent
           classes={contentStyles}
