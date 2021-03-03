@@ -4,9 +4,14 @@ import bgrslogo from "../../images/bgrslogo.jpg";
 import atologo from "../../images/atologo.jpg";
 import rbhlogo from "../../images/rbhlogo.png";
 import wmlogo from "../../images/wmlogo.jpg";
+import tbgrslogo from "../../images/transpbgrslogo.png";
+import tatologo from "../../images/transpatologo.png";
+import trbhlogo from "../../images/transprbhlogo.png";
+import twmlogo from "../../images/transpwmlogo.png";
 import { withStyles } from "@material-ui/core/styles";
 import ExperienceModal from "./ExperienceModal";
 import Button from "@material-ui/core/Button";
+import CustomCard from "./CustomCard";
 import {
   ExperienceContainer,
   ExperienceHeader,
@@ -42,66 +47,38 @@ const Experience = () => {
         handleClickOpen={handleClickOpen}
         handleClose={handleClose}
       />
-      <Grid container>
-        <Grid item xs={6} container justify="flex-end">
-          <ExperienceLogo src={bgrslogo} />
+      <Grid container spacing={2}>
+        <Grid item xs={12}>
+          <CustomCard
+            logo={tbgrslogo}
+            overline={"SEPT 2019  ~  DEC 2019  ||  JAN 2019  ~  APR 2019"}
+            heading={"BGRS"}
+            body={"asd"}
+          />
         </Grid>
-        <Grid
-          item
-          xs={6}
-          container
-          direction="column"
-          justify="center"
-          alignItems="flex-start"
-        >
-          <EInfoTitle>Software Developer</EInfoTitle>
-          <EInfoSub>Internship</EInfoSub>
-          <EInfoDesc>React, Redux, Javascript, HTML, CSS</EInfoDesc>
+        <Grid item xs={12}>
+          <CustomCard
+            logo={tatologo}
+            overline={"MAY 2018  ~  AUG 2018"}
+            heading={"Appliance TV Outlet"}
+            body={"asd"}
+          />
         </Grid>
-        <Grid
-          item
-          xs={6}
-          container
-          direction="column"
-          justify="center"
-          alignItems="flex-end"
-        >
-          <EInfoTitle>Web Developer</EInfoTitle>
-          <EInfoSub>Internship</EInfoSub>
-          <EInfoDesc>Javascript, HTML, CSS, Magento</EInfoDesc>
+        <Grid item xs={12}>
+          <CustomCard
+            logo={trbhlogo}
+            overline={"JAN 2015  ~  APR 2015"}
+            heading={"Rothman Bension & Hedges"}
+            body={"asd"}
+          />
         </Grid>
-        <Grid item xs={6} container justify="flex-start">
-          <ExperienceLogo src={atologo} />
-        </Grid>
-        <Grid item xs={6} container justify="flex-end">
-          <ExperienceLogo src={rbhlogo} />
-        </Grid>
-        <Grid
-          item
-          xs={6}
-          container
-          direction="column"
-          justify="center"
-          alignItems="flex-start"
-        >
-          <EInfoTitle>Application Developer</EInfoTitle>
-          <EInfoSub>Internship</EInfoSub>
-          <EInfoDesc>Java, Business Object, Excel </EInfoDesc>
-        </Grid>
-        <Grid
-          item
-          xs={6}
-          container
-          direction="column"
-          justify="center"
-          alignItems="flex-end"
-        >
-          <EInfoTitle>Mobile Developer</EInfoTitle>
-          <EInfoSub>Internship</EInfoSub>
-          <EInfoDesc>jQuery, Javascript, HTML, CSS</EInfoDesc>
-        </Grid>
-        <Grid item xs={6} container justify="flex-start">
-          <ExperienceLogo src={wmlogo} />
+        <Grid item xs={12}>
+          <CustomCard
+            logo={twmlogo}
+            overline={"JAN 2014  ~  APR 2014"}
+            heading={"Work Market"}
+            body={"asd"}
+          />
         </Grid>
       </Grid>
     </ExperienceContainer>
