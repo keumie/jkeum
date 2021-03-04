@@ -44,12 +44,20 @@ const TextInfoContent = ({
       >
         {title}
       </Typography>
-      <Typography {...bodyProps} className={cx(css.body, bodyProps.className)}>
-        <Grid container justify="space-between" alignItems="baseline">
-          <ArrowRightIcon />
-          <>{body}</>
-        </Grid>
-      </Typography>
+      <Grid
+        container
+        justify="space-between"
+        alignItems="flex-start"
+        wrap="nowrap"
+      >
+        <ArrowRightIcon />
+        <Typography
+          {...bodyProps}
+          className={cx(css.body, bodyProps.className)}
+        >
+          {body}
+        </Typography>
+      </Grid>
     </>
   );
 };

@@ -29,21 +29,21 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
     },
   },
   media: {
-    width: "auto",
-    height: "200px",
-    marginLeft: "auto",
-    marginTop: spacing(-3),
+    // width: "200px",
+    // height: "200px",
+    // marginLeft: "auto",
+    // marginTop: spacing(-3),
     // paddingBottom: "48%",
     borderRadius: spacing(2),
     backgroundColor: "#fff",
     position: "relative",
-    [breakpoints.up("md")]: {
-      width: "200px",
-      height: "200px",
-      marginLeft: spacing(-3),
-      marginTop: 0,
-      transform: "translateX(-8px)",
-    },
+    // [breakpoints.up("md")]: {
+    width: "200px",
+    height: "200px",
+    marginLeft: spacing(-3),
+    marginTop: 0,
+    transform: "translateX(-8px)",
+    // },
     "&:after": {
       content: '" "',
       position: "absolute",
@@ -105,9 +105,10 @@ const boxStyle = makeStyles(({ spacing }) => {
     },
     body: {
       marginBottom: spacing(2),
-      fontSize: "0.8rem",
+      fontSize: "12px",
       letterSpacing: "0.00938em",
       fontFamily: family,
+      lineHeight: "24px",
     },
   };
 });
@@ -141,7 +142,7 @@ export const CustomCard = React.memo(function BlogCard(props) {
           heading={heading}
           title={title}
           body={
-            "Git is a distributed version control system. Every dev has a working copy of the code and..."
+            "Git is a distributed version control system. Every dev has a working copy of the code and... i hope this works so i dont need more to worrry about"
           }
         />
         {/* <Button className={styles.button}>Read more</Button> */}
