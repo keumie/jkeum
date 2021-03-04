@@ -3,22 +3,33 @@ import PropTypes from "prop-types";
 import cx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
+import Grid from "@material-ui/core/Grid";
+import ArrowRightIcon from "@material-ui/icons/ArrowRight";
 
 const useDefaultStyles = makeStyles({ name: "TextInfoContent" });
 const TextInfoContent = ({
   useStyles,
   overline,
   heading,
+  title,
   body,
   overlineProps,
   headingProps,
+  titleProps,
   bodyProps,
   ...props
 }) => {
   const css = useStyles(props);
   return (
     <>
-      {overline && (
+      <Grid container justify="space-between" alignItems="center">
+        <Typography
+          component={"h4"}
+          {...headingProps}
+          className={cx(css.heading, headingProps.className)}
+        >
+          {heading}
+        </Typography>
         <Typography
           component={"span"}
           {...overlineProps}
@@ -26,16 +37,18 @@ const TextInfoContent = ({
         >
           {overline}
         </Typography>
-      )}
+      </Grid>
       <Typography
-        component={"h4"}
-        {...headingProps}
-        className={cx(css.heading, headingProps.className)}
+        {...titleProps}
+        className={cx(css.title, titleProps.className)}
       >
-        {heading}
+        {title}
       </Typography>
       <Typography {...bodyProps} className={cx(css.body, bodyProps.className)}>
-        {body}
+        <Grid container justify="space-between" alignItems="baseline">
+          <ArrowRightIcon />
+          <>{body}</>
+        </Grid>
       </Typography>
     </>
   );
@@ -50,6 +63,9 @@ TextInfoContent.propTypes = {
   headingProps: PropTypes.shape({
     className: PropTypes.string,
   }),
+  titleProps: PropTypes.shape({
+    className: PropTypes.string,
+  }),
   bodyProps: PropTypes.shape({
     className: PropTypes.string,
   }),
@@ -58,9 +74,11 @@ TextInfoContent.propTypes = {
 TextInfoContent.defaultProps = {
   overline: null,
   heading: null,
+  title: null,
   body: null,
   overlineProps: {},
   headingProps: {},
+  titleProps: {},
   bodyProps: {},
   useStyles: useDefaultStyles,
 };

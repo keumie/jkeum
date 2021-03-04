@@ -53,6 +53,7 @@ const Experience = () => {
             logo={tbgrslogo}
             overline={"SEPT 2019  ~  DEC 2019  ||  JAN 2019  ~  APR 2019"}
             heading={"BGRS"}
+            title={"Software Developer"}
             body={"asd"}
           />
         </Grid>
@@ -61,6 +62,7 @@ const Experience = () => {
             logo={tatologo}
             overline={"MAY 2018  ~  AUG 2018"}
             heading={"Appliance TV Outlet"}
+            title={"Web Developer"}
             body={"asd"}
           />
         </Grid>
@@ -69,6 +71,7 @@ const Experience = () => {
             logo={trbhlogo}
             overline={"JAN 2015  ~  APR 2015"}
             heading={"Rothman Bension & Hedges"}
+            title={"Application Developer"}
             body={"asd"}
           />
         </Grid>
@@ -77,6 +80,7 @@ const Experience = () => {
             logo={twmlogo}
             overline={"JAN 2014  ~  APR 2014"}
             heading={"Work Market"}
+            title={"Mobile Developer"}
             body={"asd"}
           />
         </Grid>

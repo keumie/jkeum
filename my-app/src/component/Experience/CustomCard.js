@@ -59,10 +59,10 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
   content: {
     padding: 24,
   },
-  cta: {
-    marginTop: 24,
-    textTransform: "initial",
-  },
+  // cta: {
+  //   marginTop: 24,
+  //   textTransform: "initial",
+  // },
   // button: {
   //   backgroundImage: "linear-gradient(147deg, #fe8a39 0%, #fd3838 74%)",
   //   boxShadow: "0px 4px 32px rgba(252, 56, 56, 0.4)",
@@ -81,14 +81,27 @@ const boxStyle = makeStyles(({ spacing }) => {
       textTransform: "uppercase",
       letterSpacing: "1px",
       fontSize: 12,
-      marginBottom: "0.875em",
+      // marginBottom: "0.875em",
       display: "inline-block",
     },
     heading: {
+      textTransform: "uppercase",
       fontSize: 20,
       fontWeight: "bold",
+      // marginBottom: "0.35em",
+      fontFamily: family,
+      // color: "linear-gradient(147deg, #fe8a39 0%, #fd3838 74%)",
+      background: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
+      WebkitBackgroundClip: "text",
+      WebkitTextFillColor: "transparent",
+    },
+    title: {
+      fontSize: 12,
+      fontWeight: "500",
       marginBottom: "0.35em",
       fontFamily: family,
+      color: "orange",
+      textTransform: "uppercase",
     },
     body: {
       marginBottom: spacing(2),
@@ -114,7 +127,7 @@ const shadowStyle = makeStyles({
 
 export const CustomCard = React.memo(function BlogCard(props) {
   console.log(props);
-  const { logo, overline, heading, ...othr } = props;
+  const { logo, overline, heading, title, ...othr } = props;
   const styles = useStyles();
   const contentStyles = boxStyle();
   const shadowStyles = shadowStyle();
@@ -126,6 +139,7 @@ export const CustomCard = React.memo(function BlogCard(props) {
           classes={contentStyles}
           overline={overline}
           heading={heading}
+          title={title}
           body={
             "Git is a distributed version control system. Every dev has a working copy of the code and..."
           }
