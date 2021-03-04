@@ -114,17 +114,18 @@ const shadowStyle = makeStyles({
 
 export const CustomCard = React.memo(function BlogCard(props) {
   console.log(props);
+  const { logo, overline, heading, ...othr } = props;
   const styles = useStyles();
   const contentStyles = boxStyle();
   const shadowStyles = shadowStyle();
   return (
     <Card className={cx(styles.root, shadowStyles.root)}>
-      <CardMedia className={styles.media} image={bgrslogo} />
+      <CardMedia className={styles.media} image={logo} />
       <CardContent>
         <TextInfoContent
           classes={contentStyles}
-          overline={"28 MAR 2019  ~  30 MAR 2019"}
-          heading={"BGRS"}
+          overline={overline}
+          heading={heading}
           body={
             "Git is a distributed version control system. Every dev has a working copy of the code and..."
           }
