@@ -7,11 +7,24 @@ import Grid from "@material-ui/core/Grid";
 import ArrowRightIcon from "@material-ui/icons/ArrowRight";
 
 const useDefaultStyles = makeStyles({ name: "TextInfoContent" });
+
+const generateList = (desc, bodyProps, css) =>
+  desc.map((text) => (
+    <Grid container justify="flex-start" alignItems="flex-start" wrap="nowrap">
+      <ArrowRightIcon />
+      <Typography {...bodyProps} className={cx(css.body, bodyProps.className)}>
+        {text}
+      </Typography>
+    </Grid>
+  ));
+
 const TextInfoContent = ({
   useStyles,
   overline,
   heading,
   title,
+  desc,
+  location,
   body,
   overlineProps,
   headingProps,
@@ -38,26 +51,16 @@ const TextInfoContent = ({
           {overline}
         </Typography>
       </Grid>
-      <Typography
-        {...titleProps}
-        className={cx(css.title, titleProps.className)}
-      >
-        {title}
-      </Typography>
-      <Grid
-        container
-        justify="space-between"
-        alignItems="flex-start"
-        wrap="nowrap"
-      >
-        <ArrowRightIcon />
+      <Grid container justify="space-between" alignItems="center">
         <Typography
-          {...bodyProps}
-          className={cx(css.body, bodyProps.className)}
+          {...titleProps}
+          className={cx(css.title, titleProps.className)}
         >
-          {body}
+          {title}
         </Typography>
+        <Typography className={css.overline}>{location}</Typography>
       </Grid>
+      {generateList(desc, bodyProps, css)}
     </>
   );
 };

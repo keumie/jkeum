@@ -34,6 +34,7 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
     // marginLeft: "auto",
     // marginTop: spacing(-3),
     // paddingBottom: "48%",
+    flexShrink: 0,
     borderRadius: spacing(2),
     backgroundColor: "#fff",
     position: "relative",
@@ -104,7 +105,6 @@ const boxStyle = makeStyles(({ spacing }) => {
       textTransform: "uppercase",
     },
     body: {
-      marginBottom: spacing(2),
       fontSize: "12px",
       letterSpacing: "0.00938em",
       fontFamily: family,
@@ -128,7 +128,7 @@ const shadowStyle = makeStyles({
 
 export const CustomCard = React.memo(function BlogCard(props) {
   console.log(props);
-  const { logo, overline, heading, title, ...othr } = props;
+  const { logo, overline, heading, title, desc, location } = props;
   const styles = useStyles();
   const contentStyles = boxStyle();
   const shadowStyles = shadowStyle();
@@ -144,6 +144,8 @@ export const CustomCard = React.memo(function BlogCard(props) {
           body={
             "Git is a distributed version control system. Every dev has a working copy of the code and... i hope this works so i dont need more to worrry about"
           }
+          desc={desc}
+          location={location}
         />
         {/* <Button className={styles.button}>Read more</Button> */}
       </CardContent>
