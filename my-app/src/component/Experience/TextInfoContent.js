@@ -58,7 +58,7 @@ const TextInfoContent = ({
         >
           {title}
         </Typography>
-        <Typography className={css.overline}>{location}</Typography>
+        <Typography className={css.location}>{location}</Typography>
       </Grid>
       {generateList(desc, bodyProps, css)}
     </>

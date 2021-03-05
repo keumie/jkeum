@@ -104,6 +104,13 @@ const boxStyle = makeStyles(({ spacing }) => {
       color: "orange",
       textTransform: "uppercase",
     },
+    location: {
+      fontSize: 12,
+      fontWeight: "500",
+      marginBottom: "0.35em",
+      fontFamily: family,
+      textTransform: "uppercase",
+    },
     body: {
       fontSize: "12px",
       letterSpacing: "0.00938em",
