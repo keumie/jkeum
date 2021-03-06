@@ -1,43 +1,13 @@
-import React, { useState } from "react";
-import { Grid } from "@material-ui/core";
-import bgrslogo from "../../images/bgrslogo.jpg";
-import atologo from "../../images/atologo.jpg";
-import rbhlogo from "../../images/rbhlogo.png";
-import wmlogo from "../../images/wmlogo.jpg";
+import React from "react";
+import Grid from "@material-ui/core/Grid";
 import tbgrslogo from "../../images/transpbgrslogo.png";
 import tatologo from "../../images/transpatologo.png";
 import trbhlogo from "../../images/transprbhlogo.png";
 import twmlogo from "../../images/transpwmlogo.png";
-import { withStyles } from "@material-ui/core/styles";
-import ExperienceModal from "./ExperienceModal";
-import Button from "@material-ui/core/Button";
 import CustomCard from "./CustomCard";
-import {
-  ExperienceContainer,
-  ExperienceHeader,
-  ExperienceLogo,
-  EInfoTitle,
-  EInfoSub,
-  EInfoDesc,
-} from "./ExperienceElement";
-
-const ColorButton = withStyles((theme) => ({
-  root: {
-    color: "orange",
-  },
-}))(Button);
+import { Container, Header, Underline } from "../CommonElement";
 
 const Experience = () => {
-  const [open, setOpen] = useState(false);
-
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-
   var bgrsDesc = [
     "Significantly reduced input delay on pages with multiple form components",
     "Enhanced and developed various features onto the notification bell as well as the notification page",
@@ -68,14 +38,11 @@ const Experience = () => {
   ];
 
   return (
-    <ExperienceContainer>
-      <ExperienceHeader>experience</ExperienceHeader>
-      <ColorButton onClick={handleClickOpen}>Open dialog</ColorButton>
-      <ExperienceModal
-        open={open}
-        handleClickOpen={handleClickOpen}
-        handleClose={handleClose}
-      />
+    <Container>
+      <Grid container direction="column" justify="center" alignItems="center">
+        <Header>experience</Header>
+        <Underline />
+      </Grid>
       <Grid container spacing={2}>
         <Grid item xs={12}>
           <CustomCard
@@ -122,7 +89,7 @@ const Experience = () => {
           />
         </Grid>
       </Grid>
-    </ExperienceContainer>
+    </Container>
   );
 };
 
