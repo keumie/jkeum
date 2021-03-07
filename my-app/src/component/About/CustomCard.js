@@ -36,7 +36,7 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
     position: "relative",
     // [breakpoints.up("md")]: {
     width: "250px",
-    height: "100vh",
+    height: "400px",
     marginRight: spacing(-3),
     marginTop: 0,
     transform: "translateX(8px)",
@@ -72,6 +72,9 @@ const shadowStyle = makeStyles({
     }),
   }),
 });
+
+var desc =
+  "Hello! My name is Joey Keum and I am a software developer currently based in Canada.<br/> I enjoy creating and tinkering with various things that impact the world ranging from simple tools to complex algorithms. My goal is to build products that are both performance-driven and innovative.<br/> I recently graduated from the University of Waterloo with a Bachelor's in Computer Engineering and now looking to join the software industry. My current strengths and experience were more focused on the frontend side however moving forward, I am open to exploring and expanding my skill set to different areas.";
 
 export const CustomCard = React.memo(function BlogCard(props) {
   console.log(props);

@@ -17,7 +17,7 @@ const About = () => {
   return (
     <Container>
       <Grid container direction="column" justify="center" alignItems="center">
-        <Header>about</Header>
+        <Header>about me</Header>
         <Underline />
       </Grid>
       <CustomCard
