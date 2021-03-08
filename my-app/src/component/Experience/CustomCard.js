@@ -74,7 +74,6 @@ const shadowStyle = makeStyles({
 });
 
 export const CustomCard = React.memo(function BlogCard(props) {
-  console.log(props);
   const { logo, overline, heading, title, desc, location } = props;
   const styles = useStyles();
   const shadowStyles = shadowStyle();

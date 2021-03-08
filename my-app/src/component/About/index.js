@@ -20,15 +20,7 @@ const About = () => {
         <Header>about me</Header>
         <Underline />
       </Grid>
-      <CustomCard
-        logo={profile}
-        overline={"SEPT 2019  ~  DEC 2019  ||  JAN 2019  ~  APR 2019"}
-        heading={"BGRS"}
-        title={"Software Developer"}
-        body={"asd"}
-        desc={bgrsDesc}
-        location={"Toronto ON"}
-      />
+      <CustomCard logo={profile} />
     </Container>
   );
 };

@@ -37,7 +37,7 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
     position: "relative",
     // [breakpoints.up("md")]: {
     width: "250px",
-    height: "400px",
+    height: "450px",
     marginRight: spacing(-3),
     marginTop: 0,
     transform: "translateX(8px)",
@@ -75,8 +75,7 @@ const shadowStyle = makeStyles({
 });
 
 export const CustomCard = React.memo(function BlogCard(props) {
-  console.log(props);
-  const { logo, desc } = props;
+  const { logo } = props;
   const styles = useStyles();
   const shadowStyles = shadowStyle();
   return (

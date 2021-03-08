@@ -6,49 +6,39 @@ import ArrowRightIcon from "@material-ui/icons/ArrowRight";
 
 const useStyles = makeStyles({
   text: {
-    fontSize: 15,
+    fontSize: 14,
+    fontFamily:
+      "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif",
   },
   name: {
-    fontSize: 15,
+    fontSize: 14,
     color: "orange",
     fontWeight: "500",
-  },
-  title: {
-    fontSize: 12,
-    fontWeight: "500",
-    marginBottom: "0.35em",
     fontFamily:
       "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif",
-    color: "orange",
-    textTransform: "uppercase",
   },
-  location: {
-    fontSize: 12,
-    fontWeight: "500",
-    marginBottom: "0.35em",
-    fontFamily:
-      "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif",
-    textTransform: "uppercase",
-  },
-  body: {
+  skill: {
     fontSize: "12px",
-    letterSpacing: "0.00938em",
     fontFamily:
       "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif",
-    lineHeight: "24px",
+  },
+  skillContainer: {
+    marginTop: "5px",
   },
 });
 
 const generateList = (desc, classes) =>
   desc.map((text) => (
-    <Grid container justify="flex-start" alignItems="flex-start" wrap="nowrap">
+    <Grid container item xs={6} justify="flex-start" alignItems="center">
       <ArrowRightIcon />
-      <Typography className={classes.body}>{text}</Typography>
+      <Typography className={classes.skill}>{text}</Typography>
     </Grid>
   ));
 
-const TextInfoContent = ({ overline, heading, title, desc, location }) => {
+const TextInfoContent = () => {
   const classes = useStyles();
+  var desc = ["React", "Javascript", "HTML", "CSS", "Redux", "Java"];
+
   return (
     <>
       <Typography className={classes.text} display="inline">
@@ -69,12 +59,18 @@ const TextInfoContent = ({ overline, heading, title, desc, location }) => {
         industry. My current strengths and experience were more focused on the
         frontend side however moving forward, I am open to exploring and
         expanding my skill set to different areas.
+        <br />
+        <br />
+        These are a few technologies that I have been working with recently:
       </Typography>
-      <Grid container justify="space-between" alignItems="center">
-        <Typography className={classes.title}>{title}</Typography>
-        <Typography className={classes.location}>{location}</Typography>
+      <Grid
+        className={classes.skillContainer}
+        container
+        justify="space-evenly"
+        alignItems="center"
+      >
+        {generateList(desc, classes)}
       </Grid>
-      {/* {generateList(desc, classes)} */}
     </>
   );
 };
