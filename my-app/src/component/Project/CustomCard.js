@@ -78,9 +78,9 @@ export const CustomCard = React.memo(function BlogCard(props) {
   const styles = useStyles();
   const shadowStyles = shadowStyle();
   return (
-    <Card className={cx(styles.root, shadowStyles.root)}>
-      <CardMedia className={styles.media} image={logo} />
-      <CardContent className={styles.boxStyle}>
+    //<Card className={cx(styles.root, shadowStyles.root)}>
+    <CardMedia className={styles.media} image={logo} />
+    /* <CardContent className={styles.boxStyle}>
         <TextInfoContent
           overline={overline}
           heading={heading}
@@ -88,8 +88,8 @@ export const CustomCard = React.memo(function BlogCard(props) {
           desc={desc}
           location={location}
         />
-      </CardContent>
-    </Card>
+      </CardContent> */
+    //</Card>
   );
 });
 
