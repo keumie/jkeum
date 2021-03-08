@@ -1,6 +1,5 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
-import CustomCard from "./CustomCard";
 import website from "../../images/website.png";
 import element from "../../images/element.png";
 import { Container, Header, Underline } from "../CommonElement";
