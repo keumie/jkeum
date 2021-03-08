@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import NavBar from "../component/NavBar";
 import SideBar from "../component/SideBar";
 import Home from "../component/Home";
+import About from "../component/About";
 import Experience from "../component/Experience";
 
 const Main = () => {
@@ -16,6 +17,7 @@ const Main = () => {
       <SideBar isOpen={isOpen} toggle={toggle} />
       <NavBar toggle={toggle} />
       <Home />
+      <About />
       <Experience />
     </>
   );

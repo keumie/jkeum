@@ -19,6 +19,7 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
     display: "flex",
     flexDirection: "column",
     paddingBottom: spacing(2),
+    maxWidth: "600px",
     [breakpoints.up("md")]: {
       flexDirection: "row",
       paddingTop: spacing(2),
@@ -35,11 +36,11 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
     backgroundColor: "#fff",
     position: "relative",
     // [breakpoints.up("md")]: {
-    width: "200px",
-    height: "200px",
-    marginLeft: spacing(-3),
+    width: "250px",
+    height: "450px",
+    marginRight: spacing(-3),
     marginTop: 0,
-    transform: "translateX(-8px)",
+    transform: "translateX(8px)",
     // },
     "&:after": {
       content: '" "',
@@ -74,21 +75,15 @@ const shadowStyle = makeStyles({
 });
 
 export const CustomCard = React.memo(function BlogCard(props) {
-  const { logo, overline, heading, title, desc, location } = props;
+  const { logo } = props;
   const styles = useStyles();
   const shadowStyles = shadowStyle();
   return (
     <Card className={cx(styles.root, shadowStyles.root)}>
-      <CardMedia className={styles.media} image={logo} />
       <CardContent className={styles.boxStyle}>
-        <TextInfoContent
-          overline={overline}
-          heading={heading}
-          title={title}
-          desc={desc}
-          location={location}
-        />
+        <TextInfoContent />
       </CardContent>
+      <CardMedia className={styles.media} image={logo} />
     </Card>
   );
 });
