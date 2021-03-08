@@ -4,6 +4,7 @@ import SideBar from "../component/SideBar";
 import Home from "../component/Home";
 import About from "../component/About";
 import Experience from "../component/Experience";
+import Project from "../component/Project";
 
 const Main = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,6 +20,7 @@ const Main = () => {
       <Home />
       <About />
       <Experience />
+      <Project />
     </>
   );
 };
