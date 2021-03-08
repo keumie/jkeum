@@ -5,20 +5,13 @@ import Grid from "@material-ui/core/Grid";
 import ArrowRightIcon from "@material-ui/icons/ArrowRight";
 
 const useStyles = makeStyles({
-  overline: {
-    textTransform: "uppercase",
-    letterSpacing: "1px",
-    fontSize: 12,
-    display: "inline-block",
+  text: {
+    fontSize: 15,
   },
-  heading: {
-    textTransform: "uppercase",
-    fontSize: 20,
-    fontWeight: "bold",
-
-    background: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
-    WebkitBackgroundClip: "text",
-    WebkitTextFillColor: "transparent",
+  name: {
+    fontSize: 15,
+    color: "orange",
+    fontWeight: "500",
   },
   title: {
     fontSize: 12,
@@ -58,24 +51,30 @@ const TextInfoContent = ({ overline, heading, title, desc, location }) => {
   const classes = useStyles();
   return (
     <>
-      <Grid
-        className={classes.root}
-        container
-        justify="space-between"
-        alignItems="center"
-      >
-        <Typography component={"h4"} className={classes.heading}>
-          {heading}
-        </Typography>
-        <Typography component={"span"} className={classes.overline}>
-          {overline}
-        </Typography>
-      </Grid>
+      <Typography className={classes.text} display="inline">
+        Hello! My name is{" "}
+      </Typography>
+      <Typography className={classes.name} display="inline">
+        Joey Keum{" "}
+      </Typography>
+      <Typography className={classes.text} display="inline">
+        and I am a software developer currently based in Canada.
+        <br />
+        <br /> I enjoy creating and tinkering with various things that impact
+        the world ranging from simple tools to complex algorithms. My goal is to
+        build products that are both performance-driven and innovative.
+        <br />
+        <br /> I recently graduated from the University of Waterloo with a
+        Bachelor's in Computer Engineering and now looking to join the software
+        industry. My current strengths and experience were more focused on the
+        frontend side however moving forward, I am open to exploring and
+        expanding my skill set to different areas.
+      </Typography>
       <Grid container justify="space-between" alignItems="center">
         <Typography className={classes.title}>{title}</Typography>
         <Typography className={classes.location}>{location}</Typography>
       </Grid>
-      {generateList(desc, classes)}
+      {/* {generateList(desc, classes)} */}
     </>
   );
 };

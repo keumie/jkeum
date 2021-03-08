@@ -19,6 +19,7 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
     display: "flex",
     flexDirection: "column",
     paddingBottom: spacing(2),
+    maxWidth: "600px",
     [breakpoints.up("md")]: {
       flexDirection: "row",
       paddingTop: spacing(2),
@@ -73,24 +74,15 @@ const shadowStyle = makeStyles({
   }),
 });
 
-var desc =
-  "Hello! My name is Joey Keum and I am a software developer currently based in Canada.<br/> I enjoy creating and tinkering with various things that impact the world ranging from simple tools to complex algorithms. My goal is to build products that are both performance-driven and innovative.<br/> I recently graduated from the University of Waterloo with a Bachelor's in Computer Engineering and now looking to join the software industry. My current strengths and experience were more focused on the frontend side however moving forward, I am open to exploring and expanding my skill set to different areas.";
-
 export const CustomCard = React.memo(function BlogCard(props) {
   console.log(props);
-  const { logo, overline, heading, title, desc, location } = props;
+  const { logo, desc } = props;
   const styles = useStyles();
   const shadowStyles = shadowStyle();
   return (
     <Card className={cx(styles.root, shadowStyles.root)}>
       <CardContent className={styles.boxStyle}>
-        <TextInfoContent
-          overline={overline}
-          heading={heading}
-          title={title}
-          desc={desc}
-          location={location}
-        />
+        <TextInfoContent />
       </CardContent>
       <CardMedia className={styles.media} image={logo} />
     </Card>

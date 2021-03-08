@@ -58,12 +58,7 @@ const TextInfoContent = ({ overline, heading, title, desc, location }) => {
   const classes = useStyles();
   return (
     <>
-      <Grid
-        className={classes.root}
-        container
-        justify="space-between"
-        alignItems="center"
-      >
+      <Grid container justify="space-between" alignItems="center">
         <Typography component={"h4"} className={classes.heading}>
           {heading}
         </Typography>
