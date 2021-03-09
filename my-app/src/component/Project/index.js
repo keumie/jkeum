@@ -15,14 +15,16 @@ const Project = () => {
       </Grid>
       <Grid container justify="space-evenly" alignItems="center">
         <ImageContainer>
-          {/* <Image src={element} /> */}
+          <Image src={element} />
           <ImageText>
             <Text />
           </ImageText>
         </ImageContainer>
         <ImageContainer>
           <Image src={website} />
-          <ImageText>bye</ImageText>
+          <ImageText>
+            <Text />
+          </ImageText>
         </ImageContainer>
       </Grid>
     </Container>
