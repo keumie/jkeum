@@ -19,7 +19,7 @@ export const ImageText = styled.div`
   top: 0;
   width: 300px;
   height: 600px;
-  background-color: black;
+  background-color: gray;
   color: white;
   transition: 0.7s all ease;
   opacity: 1;
