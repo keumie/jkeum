@@ -33,7 +33,7 @@ const useStyles = makeStyles({
 
 const Test = (props) => {
   const { title, tools, description, task, github, link } = props;
-  console.log(props);
+
   const classes = useStyles();
   return (
     <Grid
