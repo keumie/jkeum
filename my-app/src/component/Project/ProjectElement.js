@@ -19,11 +19,11 @@ export const ImageText = styled.div`
   top: 0;
   width: 300px;
   height: 600px;
-  background-color: gray;
+  background-color: black;
   color: white;
   transition: 0.7s all ease;
-  opacity: 1;
-  // &:hover {
-  //   opacity: 0.9;
-  // }
+  opacity: 0;
+  &:hover {
+    opacity: 0.9;
+  }
 `;

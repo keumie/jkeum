@@ -22,6 +22,8 @@ const Project = () => {
               tools="Unity, C#"
               description="Chemistry-based arcade game where the objective is to collect points to transform into different molecules and survive as long as possible to maximize your score."
               task="Developed various features such as player ability, enemy shooting patterns as well as the overall concept and design."
+              github="https://github.com/antu3199/ElementGame"
+              link="https://play.google.com/store/apps/details?id=com.Puzzle.Element"
             />
           </ImageText>
         </ImageContainer>
@@ -33,6 +35,8 @@ const Project = () => {
               tools="React, Javascript, HTML, CSS"
               description="A personal portfolio website to showcase my skillset for frontend development and market myself to the industry."
               task="Hosted on Github Pages, the website was created, designed, and developed from scratch."
+              github="https://github.com/keumie/jkeum"
+              link=""
             />
           </ImageText>
         </ImageContainer>

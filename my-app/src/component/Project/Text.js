@@ -5,54 +5,67 @@ import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
 import LaunchIcon from "@material-ui/icons/Launch";
 import GitHubIcon from "@material-ui/icons/GitHub";
+import { orange } from "@material-ui/core/colors";
 
 const useStyles = makeStyles({
   root: {
     padding: "20px",
+    boxSizing: "border-box",
+    height: "100%",
   },
   title: {
-    width: "100%",
-    fontSize: "30px",
+    fontSize: "25px",
+    textTransform: "uppercase",
+    fontWeight: "bold",
     color: "orange",
   },
   tool: {
-    width: "100%",
     color: "gray",
-    paddingBottom: "35px",
+    paddingBottom: "75px",
   },
-  description: { width: "100%", paddingBottom: "20px" },
-  task: { width: "100" },
-  link: { width: "100%" },
+  description: { paddingBottom: "20px" },
+  button: {
+    color: "black",
+    background: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
+    borderRadius: "5px",
+  },
 });
 
 const Test = (props) => {
-  const { title, tools, description, task } = props;
+  const { title, tools, description, task, github, link } = props;
   console.log(props);
   const classes = useStyles();
   return (
-    <div className={classes.root}>
-      <Grid
-        container
-        direction="column"
-        justify="space-between"
-        alignItems="center"
-      >
+    <Grid
+      className={classes.root}
+      container
+      direction="column"
+      justify="space-between"
+      alignItems="flex-start"
+    >
+      <Grid item>
         <Typography className={classes.title}>{title}</Typography>
         <Typography className={classes.tool}>{tools}</Typography>
         <Typography className={classes.description}>{description}</Typography>
-
-        <Typography className={classes.task}>{task}</Typography>
-        {/* <Typography className={classes.link}>{}</Typography> */}
-        <Grid container justify="flex-end" alignItems="center">
-          <IconButton>
-            <GitHubIcon />
-          </IconButton>
-          <IconButton>
-            <LaunchIcon />
-          </IconButton>
-        </Grid>
+        <Typography>{task}</Typography>
       </Grid>
-    </div>
+      <Grid container justify="flex-end" alignItems="center">
+        <IconButton>
+          <GitHubIcon
+            className={classes.button}
+            fontSize="large"
+            onClick={() => window.open(github)}
+          />
+        </IconButton>
+        <IconButton>
+          <LaunchIcon
+            className={classes.button}
+            fontSize="large"
+            onClick={() => window.open(link)}
+          />
+        </IconButton>
+      </Grid>
+    </Grid>
   );
 };
 
