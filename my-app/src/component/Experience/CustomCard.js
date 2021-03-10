@@ -62,14 +62,14 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
 
 const shadowStyle = makeStyles({
   root: ({ inactive }) => ({
-    boxShadow: "0 0 20px 0 rgba(0,0,0)",
-    transition: "0.3s",
-    ...(!inactive && {
-      "&:hover": {
-        transform: "translateY(-3px)",
-        boxShadow: "0 4px 20px 0 rgba(0,0,0,0.12)",
-      },
-    }),
+    boxShadow: "5px 5px 50px 5px rgba(0,0,0)",
+    // transition: "0.3s",
+    // ...(!inactive && {
+    //   "&:hover": {
+    //     transform: "translateY(-3px)",
+    //     boxShadow: "0 4px 20px 0 rgba(0,0,0,0.12)",
+    //   },
+    // }),
   }),
 });
 
