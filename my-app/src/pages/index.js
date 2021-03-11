@@ -5,6 +5,7 @@ import Home from "../component/Home";
 import About from "../component/About";
 import Experience from "../component/Experience";
 import Project from "../component/Project";
+import Contact from "../component/Contact";
 
 const Main = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,6 +22,7 @@ const Main = () => {
       <About />
       <Experience />
       <Project />
+      <Contact />
     </>
   );
 };
