@@ -5,7 +5,6 @@ import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
 import LaunchIcon from "@material-ui/icons/Launch";
 import GitHubIcon from "@material-ui/icons/GitHub";
-import { orange } from "@material-ui/core/colors";
 
 const useStyles = makeStyles({
   root: {
