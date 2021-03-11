@@ -1,6 +1,7 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
 import { Container, Header, Underline } from "../CommonElement";
+import Form from "./form";
 
 const Contact = () => {
   return (
@@ -9,6 +10,7 @@ const Contact = () => {
         <Header>contact</Header>
         <Underline />
       </Grid>
+      <Form />
     </Container>
   );
 };
