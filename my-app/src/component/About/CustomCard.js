@@ -19,7 +19,7 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
     display: "flex",
     flexDirection: "column",
     paddingBottom: spacing(2),
-    maxWidth: "600px",
+    width: "70%",
     [breakpoints.up("md")]: {
       flexDirection: "row",
       paddingTop: spacing(2),
@@ -57,7 +57,7 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
   boxStyle: {
     fontFamily:
       "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif",
-    width: "100%",
+    width: "auto",
   },
 }));
 
