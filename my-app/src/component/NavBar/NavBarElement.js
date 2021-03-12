@@ -14,9 +14,6 @@ export const NavbarContainer = styled.div`
   justify-content: space-between;
   z-index: 50;
 `;
-// @media screen and (max-width: 960px) {
-//   transition: 0.8s all ease;
-// }
 
 export const NavLogo = styled.div`
   color: orange;
@@ -26,7 +23,9 @@ export const NavLogo = styled.div`
 `;
 
 export const MobileIcon = styled.div`
+  display: none;
   @media screen and (max-width: 768px) {
+    display: block;
     font-size: 1.8 rem;
     cursor: pointer;
     color: white;
