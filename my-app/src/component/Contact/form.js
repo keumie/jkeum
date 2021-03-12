@@ -10,9 +10,9 @@ const useStyles = makeStyles({
       color: "orange",
       borderColor: "orange",
     },
-    '& .MuiOutlinedInput-root': {
-      '&.Mui-focused fieldset': {
-        borderColor: 'orange',
+    "& .MuiOutlinedInput-root": {
+      "&.Mui-focused fieldset": {
+        borderColor: "orange",
       },
     },
   },

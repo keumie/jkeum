@@ -6,7 +6,8 @@ export const HomeContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 800px;
+  width: 100vw;
+  height: 100vh;
   position: relative;
   z-index: 1;
   :before {
@@ -24,14 +25,14 @@ export const HomeContainer = styled.div`
 // add before styles;
 
 export const HomeBg = styled.div`
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
 `;
 
 export const VideoBg = styled.video`
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   -o-object-fit: cover;
   object-fit: cover;
 `;
