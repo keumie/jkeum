@@ -5,6 +5,17 @@ import { makeStyles } from "@material-ui/core/styles";
 import { useForm } from "@formspree/react";
 
 const useStyles = makeStyles({
+  text: {
+    "& label.Mui-focused": {
+      color: "orange",
+      borderColor: "orange",
+    },
+    '& .MuiOutlinedInput-root': {
+      '&.Mui-focused fieldset': {
+        borderColor: 'orange',
+      },
+    },
+  },
   button: {
     background: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
   },
@@ -23,6 +34,7 @@ const Form = () => {
       <Grid container direction="column" spacing={3}>
         <Grid item>
           <TextField
+            className={classes.text}
             id="email"
             name="email"
             label="Email"
@@ -35,6 +47,7 @@ const Form = () => {
         </Grid>
         <Grid item>
           <TextField
+            className={classes.text}
             id="name"
             name="name"
             label="Name"
@@ -46,6 +59,7 @@ const Form = () => {
         </Grid>
         <Grid item>
           <TextField
+            className={classes.text}
             id="message"
             name="message"
             label="Message"
