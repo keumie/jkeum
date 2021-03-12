@@ -20,7 +20,6 @@ export const ImageText = styled.div`
   width: 300px;
   height: 600px;
   background-color: white;
-  // color: white;
   transition: 0.7s all ease;
   opacity: 0;
   &:hover {
