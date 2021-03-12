@@ -18,7 +18,7 @@ const NavBar = (props) => {
           <NavLinks to="about">about</NavLinks>
           <NavLinks to="experience">experience</NavLinks>
           <NavLinks to="project">projects</NavLinks>
-          <NavLinks to="game">game</NavLinks>
+          <NavLinks to="game">contact</NavLinks>
         </NavMenu>
       </Typography>
       <MobileIcon onClick={props.toggle}>
