@@ -3,39 +3,37 @@ import { Link as LinkS } from "react-scroll";
 import { FaTimes } from "react-icons/fa";
 
 export const SidebarContainer = styled.aside`
+  display: grid;
+
+  justify-content: center;
+  align-items: center;
   position: fixed;
-  z-index: 999;
   width: 100%;
   height: 100%;
   background: #0d0d0d;
-  display: grid;
-  align-items: center;
   transition: 0.3s ease-in-out;
+  z-index: 20;
   opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
   top: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
 `;
 
 export const CloseIcon = styled(FaTimes)`
-  color: #fff;
   position: absolute;
+  background: transparent;
   top: 1.5rem;
   right: 1.5rem;
-  background: transparent;
-  font-size: 2rem;
-  cursor: pointer;
   outline: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
 `;
 
 export const SidebarMenu = styled.ul`
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(6, 80px);
-  text-align: center;
   justify-content: center;
-  margin: 0;
-  padding: 0;
-
-  @media screen and (max-width: 480px) {
+  text-align: center;
+  grid-template-rows: repeat(6, 80px);
+  @media screen and (max-width: 500px) {
     grid-template-rows: repeat(6, 60px);
   }
 `;
