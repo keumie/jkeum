@@ -1,7 +1,7 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
 import { Container, Header, Underline } from "../CommonElement";
-import Form from "./Form";
+import Forms from "./Forms";
 import Link from "./Link";
 import Divider from "./Divider";
 import { ContactContainer } from "./ContactElement";
