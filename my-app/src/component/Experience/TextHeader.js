@@ -2,11 +2,9 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
-import ArrowRightIcon from "@material-ui/icons/ArrowRight";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 const useStyles = makeStyles({
-  overline: {
+  date: {
     textTransform: "uppercase",
     letterSpacing: "1px",
     fontSize: 12,
@@ -38,38 +36,22 @@ const useStyles = makeStyles({
       "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif",
     textTransform: "uppercase",
   },
-  body: {
-    fontSize: "12px",
-    letterSpacing: "0.00938em",
-    fontFamily:
-      "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif",
-    lineHeight: "24px",
-  },
 });
 
-const generateList = (desc, classes) =>
-  desc.map((text) => (
-    <Grid container justify="flex-start" alignItems="flex-start" wrap="nowrap">
-      <ArrowRightIcon />
-      <Typography className={classes.body}>{text}</Typography>
-    </Grid>
-  ));
-
-const TextInfoContent = ({ overline, heading, title, desc, location }) => {
+const TextHeader = (props) => {
+  const { date, heading, title, location, width } = props;
   const classes = useStyles();
-  const width = useMediaQuery("(min-width:850px)");
 
-  console.log(width);
   return (
     <>
-      {width && (
+      {width ? (
         <>
           <Grid container justify="space-between" alignItems="center">
             <Typography component={"h4"} className={classes.heading}>
               {heading}
             </Typography>
-            <Typography component={"span"} className={classes.overline}>
-              {overline}
+            <Typography component={"span"} className={classes.date}>
+              {date}
             </Typography>
           </Grid>
           <Grid container justify="space-between" alignItems="center">
@@ -77,10 +59,25 @@ const TextInfoContent = ({ overline, heading, title, desc, location }) => {
             <Typography className={classes.location}>{location}</Typography>
           </Grid>
         </>
+      ) : (
+        <Grid
+          container
+          direction="column"
+          justify="center"
+          alignItems="flex-start"
+        >
+          <Typography component={"h4"} className={classes.heading}>
+            {heading}
+          </Typography>
+          <Typography className={classes.title}>{title}</Typography>
+          <Typography className={classes.location}>{location}</Typography>
+          <Typography component={"span"} className={classes.date}>
+            {date}
+          </Typography>
+        </Grid>
       )}
-      {generateList(desc, classes)}
     </>
   );
 };
 
-export default TextInfoContent;
+export default TextHeader;

@@ -1,10 +1,12 @@
 import React from "react";
-import cx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
-import TextInfoContent from "./TextInfoContent";
+import Grid from "@material-ui/core/Grid";
+import TextHeader from "./TextHeader";
+import Description from "./Description";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -23,6 +25,11 @@ const useStyles = makeStyles((theme) => ({
     height: "200px",
     marginLeft: "-24px",
     transform: "translateX(-8px)",
+    [theme.breakpoints.down(650)]: {
+      width: "100%",
+      marginLeft: 0,
+      transform: "translateX(-16px)",
+    },
     "&:after": {
       content: '" "',
       position: "absolute",
@@ -37,25 +44,58 @@ const useStyles = makeStyles((theme) => ({
   },
   text: {
     width: "auto",
+    "&:last-child": {
+      paddingBottom: "16px",
+    },
   },
 }));
 
 export const CustomCard = (props) => {
-  const { logo, overline, heading, title, desc, location } = props;
+  const { logo, date, heading, title, desc, location } = props;
   const classes = useStyles();
+  const width = useMediaQuery("(min-width:925px)");
 
+  console.log(width);
   return (
     <Card className={classes.root}>
-      <CardMedia className={classes.media} image={logo} />
-      <CardContent className={classes.text}>
-        <TextInfoContent
-          overline={overline}
-          heading={heading}
-          title={title}
-          desc={desc}
-          location={location}
-        />
-      </CardContent>
+      {width ? (
+        <>
+          <CardMedia className={classes.media} image={logo} />
+          <CardContent className={classes.text}>
+            <TextHeader
+              date={date}
+              heading={heading}
+              title={title}
+              location={location}
+              width={width}
+            />
+            <Description desc={desc} />
+          </CardContent>
+        </>
+      ) : (
+        <Grid
+          container
+          direction="column"
+          justify="flex-start"
+          alignItems="flex-start"
+        >
+          <Grid container justify="flex-start" alignItems="center">
+            <CardMedia className={classes.media} image={logo} />
+            <CardContent className={classes.text}>
+              <TextHeader
+                date={date}
+                heading={heading}
+                title={title}
+                location={location}
+                width={width}
+              />
+            </CardContent>
+          </Grid>
+          <CardContent className={classes.text}>
+            <Description desc={desc} />
+          </CardContent>
+        </Grid>
+      )}
     </Card>
   );
 };
