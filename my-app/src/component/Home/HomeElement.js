@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { MdKeyboardArrowRight, MdKeyboardArrowDown } from "react-icons/md";
+import { Link } from "react-scroll";
 
 export const HomeContainer = styled.div`
   background: #0c0c0c;
@@ -22,7 +23,6 @@ export const HomeContainer = styled.div`
     z-index: 2;
   }
 `;
-// add before styles;
 
 export const HomeBg = styled.div`
   width: 100vw;
@@ -102,4 +102,26 @@ export const ArrowDown = styled(MdKeyboardArrowDown)`
   margin-left: 8px;
   font-size: 20px;
   color: black;
+`;
+
+export const Button = styled(Link)`
+  border-radius: 50px;
+  background: ${({ primary }) => (primary ? "orange" : "white")};
+  white-space: nowrap;
+  padding: ${({ big }) => (big ? "14px 48px" : "12px 30px")};
+  color: ${({ dark }) => (dark ? "#010606" : "#black")};
+  font-size: ${({ fontBig }) => (fontBig ? "20px" : "16px")};
+  outline: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    color: ${({ dark }) => (dark ? "#010606" : "black")};
+    background: ${({ primary }) => (primary ? "#010606" : "orange")};
+  }
 `;

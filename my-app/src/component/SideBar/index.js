@@ -12,16 +12,16 @@ const Sidebar = (props) => {
       <CloseIcon />
       <SidebarMenu>
         <SidebarLink to="about" onClick={props.toggle}>
-          About
+          about me
         </SidebarLink>
         <SidebarLink to="discover" onClick={props.toggle}>
-          Discover
+          experience
         </SidebarLink>
         <SidebarLink to="projects" onClick={props.toggle}>
-          Projects
+          projects
         </SidebarLink>
         <SidebarLink to="game" onClick={props.toggle}>
-          Contact
+          contact
         </SidebarLink>
       </SidebarMenu>
     </SidebarContainer>

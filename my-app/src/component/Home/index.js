@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Typography from "@material-ui/core/Typography";
 import Video from "../../video/video.mp4";
-import { Button } from "../ButtonElement";
 import {
   HomeContainer,
   HomeBg,
@@ -13,6 +12,7 @@ import {
   HomeBtnWrapper,
   ArrowRight,
   ArrowDown,
+  Button,
 } from "./HomeElement";
 
 const Main = () => {
