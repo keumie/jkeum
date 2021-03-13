@@ -20,7 +20,7 @@ const Contact = () => {
           </Grid>
           <Divider>OR</Divider>
           <Grid item>
-            <Form />
+            <Forms />
           </Grid>
         </Grid>
       </ContactContainer>
