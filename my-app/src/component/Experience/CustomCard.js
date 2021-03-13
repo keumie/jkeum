@@ -43,7 +43,10 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   text: {
-    width: "auto",
+    width: "100%",
+    [theme.breakpoints.down(850)]: {
+      width: "auto",
+    },
     "&:last-child": {
       paddingBottom: "16px",
     },
