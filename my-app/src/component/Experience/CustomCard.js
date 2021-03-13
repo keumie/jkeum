@@ -1,46 +1,35 @@
 import React from "react";
-import cx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
-import TextInfoContent from "./TextInfoContent";
+import Grid from "@material-ui/core/Grid";
+import TextHeader from "./TextHeader";
+import Description from "./Description";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
-const useStyles = makeStyles(({ breakpoints, spacing }) => ({
+const useStyles = makeStyles((theme) => ({
   root: {
-    margin: "auto",
-    borderRadius: spacing(2), // 16px
-    transition: "0.3s",
-    boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
-    position: "relative",
-    marginLeft: "auto",
+    borderRadius: "16px",
+    boxShadow: "5px 5px 50px 5px rgba(0,0,0)",
     overflow: "initial",
-    background: "#ffffff",
     display: "flex",
-    flexDirection: "column",
-    paddingBottom: spacing(2),
-    [breakpoints.up("md")]: {
-      flexDirection: "row",
-      paddingTop: spacing(2),
-    },
+    padding: "16px 0",
+    flexDirection: "row",
   },
   media: {
-    // width: "200px",
-    // height: "200px",
-    // marginLeft: "auto",
-    // marginTop: spacing(-3),
-    // paddingBottom: "48%",
     flexShrink: 0,
-    borderRadius: spacing(2),
-    backgroundColor: "#fff",
-    position: "relative",
-    // [breakpoints.up("md")]: {
+    borderRadius: "16px",
+    backgroundColor: "white",
     width: "200px",
     height: "200px",
-    marginLeft: spacing(-3),
-    marginTop: 0,
+    marginLeft: "-24px",
     transform: "translateX(-8px)",
-    // },
+    [theme.breakpoints.down(650)]: {
+      width: "100%",
+      marginLeft: 0,
+      transform: "translateX(-16px)",
+    },
     "&:after": {
       content: '" "',
       position: "absolute",
@@ -49,48 +38,66 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
       width: "100%",
       height: "100%",
       backgroundImage: "linear-gradient(147deg, #fe8a39 0%, #757575 75%)",
-      borderRadius: spacing(2), // 16
+      borderRadius: "16px",
       opacity: 0.2,
     },
   },
-  boxStyle: {
-    fontFamily:
-      "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif",
-    width: "100%",
+  text: {
+    width: "auto",
+    "&:last-child": {
+      paddingBottom: "16px",
+    },
   },
 }));
 
-const shadowStyle = makeStyles({
-  root: ({ inactive }) => ({
-    boxShadow: "5px 5px 50px 5px rgba(0,0,0)",
-    // transition: "0.3s",
-    // ...(!inactive && {
-    //   "&:hover": {
-    //     transform: "translateY(-3px)",
-    //     boxShadow: "0 4px 20px 0 rgba(0,0,0,0.12)",
-    //   },
-    // }),
-  }),
-});
+export const CustomCard = (props) => {
+  const { logo, date, heading, title, desc, location } = props;
+  const classes = useStyles();
+  const width = useMediaQuery("(min-width:925px)");
 
-export const CustomCard = React.memo(function BlogCard(props) {
-  const { logo, overline, heading, title, desc, location } = props;
-  const styles = useStyles();
-  const shadowStyles = shadowStyle();
+  console.log(width);
   return (
-    <Card className={cx(styles.root, shadowStyles.root)}>
-      <CardMedia className={styles.media} image={logo} />
-      <CardContent className={styles.boxStyle}>
-        <TextInfoContent
-          overline={overline}
-          heading={heading}
-          title={title}
-          desc={desc}
-          location={location}
-        />
-      </CardContent>
+    <Card className={classes.root}>
+      {width ? (
+        <>
+          <CardMedia className={classes.media} image={logo} />
+          <CardContent className={classes.text}>
+            <TextHeader
+              date={date}
+              heading={heading}
+              title={title}
+              location={location}
+              width={width}
+            />
+            <Description desc={desc} />
+          </CardContent>
+        </>
+      ) : (
+        <Grid
+          container
+          direction="column"
+          justify="flex-start"
+          alignItems="flex-start"
+        >
+          <Grid container justify="flex-start" alignItems="center">
+            <CardMedia className={classes.media} image={logo} />
+            <CardContent className={classes.text}>
+              <TextHeader
+                date={date}
+                heading={heading}
+                title={title}
+                location={location}
+                width={width}
+              />
+            </CardContent>
+          </Grid>
+          <CardContent className={classes.text}>
+            <Description desc={desc} />
+          </CardContent>
+        </Grid>
+      )}
     </Card>
   );
-});
+};
 
 export default CustomCard;

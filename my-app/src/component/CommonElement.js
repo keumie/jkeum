@@ -2,17 +2,14 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   padding: 75px 10%;
-  @media screen and (max-width: 768px) {
-    padding: 20px 20px;
+  @media screen and (max-width: 800px) {
+    padding: 50px 20px;
   }
 `;
 export const Header = styled.div`
   font-size: 50px;
   font-weight: bold;
   color: white;
-  @media screen and (max-width: 768px) {
-    font-size: 30px;
-  }
 `;
 
 export const Underline = styled.div`

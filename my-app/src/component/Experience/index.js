@@ -1,5 +1,6 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
+import { makeStyles } from "@material-ui/core/styles";
 import tbgrslogo from "../../images/transpbgrslogo.png";
 import tatologo from "../../images/transpatologo.png";
 import trbhlogo from "../../images/transprbhlogo.png";
@@ -7,7 +8,15 @@ import twmlogo from "../../images/transpwmlogo.png";
 import CustomCard from "./CustomCard";
 import { Container, Header, Underline } from "../CommonElement";
 
+const useStyles = makeStyles({
+  root: {
+    padding: "0px 35px",
+  },
+});
+
 const Experience = () => {
+  const classes = useStyles();
+
   var bgrsDesc = [
     "Significantly reduced input delay on pages with multiple form components",
     "Enhanced and developed various features onto the notification bell as well as the notification page",
@@ -43,11 +52,11 @@ const Experience = () => {
         <Header>experience</Header>
         <Underline />
       </Grid>
-      <Grid container spacing={2}>
+      <Grid container spacing={2} className={classes.root}>
         <Grid item xs={12}>
           <CustomCard
             logo={tbgrslogo}
-            overline={"SEPT 2019  ~  DEC 2019  ||  JAN 2019  ~  APR 2019"}
+            date={"SEPT 2019  ~  DEC 2019  ||  JAN 2019  ~  APR 2019"}
             heading={"BGRS"}
             title={"Software Developer"}
             body={"asd"}
@@ -58,7 +67,7 @@ const Experience = () => {
         <Grid item xs={12}>
           <CustomCard
             logo={tatologo}
-            overline={"MAY 2018  ~  AUG 2018"}
+            date={"MAY 2018  ~  AUG 2018"}
             heading={"Appliance TV Outlet"}
             title={"Web Developer"}
             body={"asd"}
@@ -69,7 +78,7 @@ const Experience = () => {
         <Grid item xs={12}>
           <CustomCard
             logo={trbhlogo}
-            overline={"JAN 2015  ~  APR 2015"}
+            date={"JAN 2015  ~  APR 2015"}
             heading={"Rothman Bension & Hedges"}
             title={"Application Developer"}
             body={"asd"}
@@ -80,7 +89,7 @@ const Experience = () => {
         <Grid item xs={12}>
           <CustomCard
             logo={twmlogo}
-            overline={"JAN 2014  ~  APR 2014"}
+            date={"JAN 2014  ~  APR 2014"}
             heading={"Work Market"}
             title={"Mobile Developer"}
             body={"asd"}

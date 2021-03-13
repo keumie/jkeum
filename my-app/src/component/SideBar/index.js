@@ -21,7 +21,7 @@ const Sidebar = (props) => {
           Projects
         </SidebarLink>
         <SidebarLink to="game" onClick={props.toggle}>
-          Game
+          Contact
         </SidebarLink>
       </SidebarMenu>
     </SidebarContainer>

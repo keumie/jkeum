@@ -5,7 +5,6 @@ import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
 import LaunchIcon from "@material-ui/icons/Launch";
 import GitHubIcon from "@material-ui/icons/GitHub";
-import { orange } from "@material-ui/core/colors";
 
 const useStyles = makeStyles({
   root: {
@@ -20,14 +19,13 @@ const useStyles = makeStyles({
     color: "orange",
   },
   tool: {
-    color: "gray",
+    color: "#a7a7a7",
     paddingBottom: "75px",
   },
   description: { paddingBottom: "20px" },
   button: {
-    color: "black",
+    color: "white",
     background: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
-    borderRadius: "5px",
   },
 });
 
@@ -49,21 +47,17 @@ const Test = (props) => {
         <Typography className={classes.description}>{description}</Typography>
         <Typography>{task}</Typography>
       </Grid>
-      <Grid container justify="flex-end" alignItems="center">
-        <IconButton>
-          <GitHubIcon
-            className={classes.button}
-            fontSize="large"
-            onClick={() => window.open(github)}
-          />
-        </IconButton>
-        <IconButton>
-          <LaunchIcon
-            className={classes.button}
-            fontSize="large"
-            onClick={() => window.open(link)}
-          />
-        </IconButton>
+      <Grid container justify="flex-end" alignItems="center" spacing={2}>
+        <Grid item>
+          <IconButton className={classes.button}>
+            <GitHubIcon fontSize="large" onClick={() => window.open(github)} />
+          </IconButton>
+        </Grid>
+        <Grid item>
+          <IconButton className={classes.button}>
+            <LaunchIcon fontSize="large" onClick={() => window.open(link)} />
+          </IconButton>
+        </Grid>
       </Grid>
     </Grid>
   );
