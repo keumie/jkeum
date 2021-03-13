@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import ArrowRightIcon from "@material-ui/icons/ArrowRight";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 const useStyles = makeStyles({
   overline: {
@@ -56,20 +57,27 @@ const generateList = (desc, classes) =>
 
 const TextInfoContent = ({ overline, heading, title, desc, location }) => {
   const classes = useStyles();
+  const width = useMediaQuery("(min-width:850px)");
+
+  console.log(width);
   return (
     <>
-      <Grid container justify="space-between" alignItems="center">
-        <Typography component={"h4"} className={classes.heading}>
-          {heading}
-        </Typography>
-        <Typography component={"span"} className={classes.overline}>
-          {overline}
-        </Typography>
-      </Grid>
-      <Grid container justify="space-between" alignItems="center">
-        <Typography className={classes.title}>{title}</Typography>
-        <Typography className={classes.location}>{location}</Typography>
-      </Grid>
+      {width && (
+        <>
+          <Grid container justify="space-between" alignItems="center">
+            <Typography component={"h4"} className={classes.heading}>
+              {heading}
+            </Typography>
+            <Typography component={"span"} className={classes.overline}>
+              {overline}
+            </Typography>
+          </Grid>
+          <Grid container justify="space-between" alignItems="center">
+            <Typography className={classes.title}>{title}</Typography>
+            <Typography className={classes.location}>{location}</Typography>
+          </Grid>
+        </>
+      )}
       {generateList(desc, classes)}
     </>
   );
