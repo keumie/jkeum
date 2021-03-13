@@ -24,7 +24,6 @@ const useStyles = makeStyles((theme) => ({
     flexShrink: 0,
     borderRadius: "16px",
     backgroundColor: "white",
-    position: "relative",
     width: "250px",
     height: "450px",
     marginRight: "-24px",
