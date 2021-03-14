@@ -1,6 +1,15 @@
 import styled from "styled-components";
 import { Link } from "react-scroll";
 
+export const NavContainer = styled.div`
+  position: fixed;
+  background: black;
+  width: 100%;
+  height: 80px;
+  box-sizing: border-box;
+  z-index: 10;
+`;
+
 export const NavbarContainer = styled.div`
   position: fixed;
   display: flex;

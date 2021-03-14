@@ -5,6 +5,7 @@ import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
 import {
+  NavContainer,
   NavbarContainer,
   NavLogo,
   MobileIcon,
@@ -13,8 +14,19 @@ import {
 } from "./NavBarElement";
 
 const useStyles = makeStyles({
+  container: {
+    height: "100%",
+    padding: "0 24px",
+  },
+  logo: {
+    color: "orange",
+    fontSize: "1.5rem",
+    fontWeight: "bold",
+    fontFamily:
+      "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif",
+  },
   button: {
-    background: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
+    color: "white",
   },
 });
 
@@ -37,12 +49,42 @@ const NavBar = (props) => {
           <FaBars />
         </MobileIcon>
       </NavbarContainer>
-      <Grid container justify="center" alignItems="center">
-        <Button>about me</Button>
-        <Button>experience</Button>
-        <Button>project</Button>
-        <Button>contact</Button>
-      </Grid>
+      <NavContainer>
+        <Grid
+          className={classes.container}
+          container
+          justify="space-between"
+          alignItems="center"
+        >
+          <Grid item xs={4}>
+            <Button className={classes.logo} disableRipple>
+              JOEY KEUM
+            </Button>
+          </Grid>
+          <Grid item container spacing={3} xs={8} justify="flex-end">
+            <Grid item>
+              <Button className={classes.button} disableRipple>
+                about me
+              </Button>
+            </Grid>
+            <Grid item>
+              <Button className={classes.button} disableRipple>
+                experience
+              </Button>
+            </Grid>
+            <Grid item>
+              <Button className={classes.button} disableRipple>
+                project
+              </Button>
+            </Grid>
+            <Grid item>
+              <Button className={classes.button} disableRipple>
+                contact
+              </Button>
+            </Grid>
+          </Grid>
+        </Grid>
+      </NavContainer>
     </>
   );
 };
