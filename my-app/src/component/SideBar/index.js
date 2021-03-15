@@ -4,6 +4,7 @@ import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
 import { makeStyles } from "@material-ui/core/styles";
+import { Link } from "react-scroll";
 
 const useStyles = makeStyles({
   root: {
@@ -22,6 +23,7 @@ const useStyles = makeStyles({
   button: {
     color: "white",
     fontSize: "24px",
+    cursor: "pointer",
   },
   option: {
     height: "100%",
@@ -56,24 +58,60 @@ const Sidebar = (props) => {
               spacing={5}
             >
               <Grid item>
-                <Button className={classes.button} disableRipple>
+                <Link
+                  activeClass="active"
+                  to="about"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  offset={-80}
+                  className={classes.button}
+                  onClick={props.toggle}
+                >
                   about me
-                </Button>
+                </Link>
               </Grid>
               <Grid item>
-                <Button className={classes.button} disableRipple>
+                <Link
+                  activeClass="active"
+                  to="experience"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  offset={-80}
+                  className={classes.button}
+                  onClick={props.toggle}
+                >
                   experience
-                </Button>
+                </Link>
               </Grid>
               <Grid item>
-                <Button className={classes.button} disableRipple>
+                <Link
+                  activeClass="active"
+                  to="project"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  offset={-80}
+                  className={classes.button}
+                  onClick={props.toggle}
+                >
                   projects
-                </Button>
+                </Link>
               </Grid>
               <Grid item>
-                <Button className={classes.button} disableRipple>
+                <Link
+                  activeClass="active"
+                  to="contact"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  offset={-80}
+                  className={classes.button}
+                  onClick={props.toggle}
+                >
                   contact
-                </Button>
+                </Link>
               </Grid>
             </Grid>
           </Grid>

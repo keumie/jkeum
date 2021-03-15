@@ -24,9 +24,11 @@ const useStyles = makeStyles({
     color: "orange",
     fontSize: "1.5rem",
     fontWeight: "bold",
+    cursor: "pointer",
   },
   button: {
     color: "white",
+    cursor: "pointer",
   },
 });
 
@@ -48,7 +50,7 @@ const NavBar = (props) => {
             to="home"
             spy={true}
             smooth={true}
-            duration={300}
+            duration={500}
             offset={-80}
             className={classes.logo}
           >
@@ -71,7 +73,7 @@ const NavBar = (props) => {
                   to="about"
                   spy={true}
                   smooth={true}
-                  duration={300}
+                  duration={500}
                   offset={-80}
                   className={classes.button}
                 >
@@ -84,7 +86,7 @@ const NavBar = (props) => {
                   to="experience"
                   spy={true}
                   smooth={true}
-                  duration={300}
+                  duration={500}
                   offset={-80}
                   className={classes.button}
                 >
@@ -97,7 +99,7 @@ const NavBar = (props) => {
                   to="project"
                   spy={true}
                   smooth={true}
-                  duration={300}
+                  duration={500}
                   offset={-80}
                   className={classes.button}
                 >
@@ -110,7 +112,7 @@ const NavBar = (props) => {
                   to="contact"
                   spy={true}
                   smooth={true}
-                  duration={300}
+                  duration={500}
                   offset={-80}
                   className={classes.button}
                 >
