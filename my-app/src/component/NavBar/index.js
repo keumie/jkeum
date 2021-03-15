@@ -29,6 +29,13 @@ const useStyles = makeStyles({
   button: {
     color: "white",
     cursor: "pointer",
+
+    "&.active": {
+      // color: "orange",
+      paddingBottom: "10px",
+      borderBottom: "3px solid orange",
+      transition: "width 2s",
+    },
   },
 });
 
