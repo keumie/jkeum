@@ -29,12 +29,19 @@ const useStyles = makeStyles({
   button: {
     color: "white",
     cursor: "pointer",
-
-    "&.active": {
-      // color: "orange",
-      paddingBottom: "10px",
-      borderBottom: "3px solid orange",
-      transition: "width 2s",
+    "&:after": {
+      content: '""',
+      display: "block",
+      margin: "auto",
+      height: "3px",
+      width: "0px",
+      background: "transparent",
+      transition: "width .5s ease, background-color .5s ease",
+    },
+    "&.active:after": {
+      marginTop: "10px",
+      width: "100%",
+      background: "orange",
     },
   },
 });
