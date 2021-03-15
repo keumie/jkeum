@@ -34,7 +34,16 @@ const Main = () => {
         </HomeH1>
         <HomeP>I am a new graduate ready to tackle the world</HomeP>
         <HomeBtnWrapper>
-          <Button to="/about" onMouseEnter={onHover} onMouseLeave={onHover}>
+          <Button
+            activeClass="active"
+            to="about"
+            spy={true}
+            smooth={true}
+            duration={300}
+            offset={-80}
+            onMouseEnter={onHover}
+            onMouseLeave={onHover}
+          >
             <Typography>Get Started</Typography>
             {hover ? <ArrowDown /> : <ArrowRight />}
           </Button>

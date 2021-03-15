@@ -5,6 +5,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
+import { Link } from "react-scroll";
 
 const useStyles = makeStyles({
   root: {
@@ -42,32 +43,79 @@ const NavBar = (props) => {
         alignItems="center"
       >
         <Grid item xs={4}>
-          <Button className={classes.logo} disableRipple>
+          <Link
+            activeClass="active"
+            to="home"
+            spy={true}
+            smooth={true}
+            duration={300}
+            offset={-80}
+            className={classes.logo}
+          >
             JOEY KEUM
-          </Button>
+          </Link>
         </Grid>
-        <Grid item container spacing={3} xs={8} justify="flex-end">
+        <Grid
+          item
+          container
+          spacing={3}
+          xs={8}
+          justify="flex-end"
+          alignItems="center"
+        >
           {width ? (
             <>
               <Grid item>
-                <Button className={classes.button} disableRipple>
+                <Link
+                  activeClass="active"
+                  to="about"
+                  spy={true}
+                  smooth={true}
+                  duration={300}
+                  offset={-80}
+                  className={classes.button}
+                >
                   about me
-                </Button>
+                </Link>
               </Grid>
               <Grid item>
-                <Button className={classes.button} disableRipple>
+                <Link
+                  activeClass="active"
+                  to="experience"
+                  spy={true}
+                  smooth={true}
+                  duration={300}
+                  offset={-80}
+                  className={classes.button}
+                >
                   experience
-                </Button>
+                </Link>
               </Grid>
               <Grid item>
-                <Button className={classes.button} disableRipple>
-                  project
-                </Button>
+                <Link
+                  activeClass="active"
+                  to="project"
+                  spy={true}
+                  smooth={true}
+                  duration={300}
+                  offset={-80}
+                  className={classes.button}
+                >
+                  projects
+                </Link>
               </Grid>
               <Grid item>
-                <Button className={classes.button} disableRipple>
+                <Link
+                  activeClass="active"
+                  to="contact"
+                  spy={true}
+                  smooth={true}
+                  duration={300}
+                  offset={-80}
+                  className={classes.button}
+                >
                   contact
-                </Button>
+                </Link>
               </Grid>
             </>
           ) : (

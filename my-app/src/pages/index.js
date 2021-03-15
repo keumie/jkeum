@@ -6,8 +6,7 @@ import About from "../component/About";
 import Experience from "../component/Experience";
 import Project from "../component/Project";
 import Contact from "../component/Contact";
-
-import Game from "../component/Game";
+import { Element } from "react-scroll";
 
 const Main = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,12 +19,21 @@ const Main = () => {
     <>
       <SideBar isOpen={isOpen} toggle={toggle} />
       <NavBar toggle={toggle} />
-      <Home />
-      <About />
-      <Experience />
-      <Project />
-      <Game />
-      <Contact />
+      <Element name="home">
+        <Home />
+      </Element>
+      <Element name="about">
+        <About />
+      </Element>
+      <Element name="experience">
+        <Experience />
+      </Element>
+      <Element name="project">
+        <Project />
+      </Element>
+      <Element name="contact">
+        <Contact />
+      </Element>
     </>
   );
 };
