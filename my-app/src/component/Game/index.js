@@ -38,6 +38,13 @@ const Game = () => {
       >
         Go to second element inside container
       </Link>
+      <Link
+        activeClass="active"
+        to="third"
+        style={{ display: "inline-block", margin: "20px" }}
+      >
+        Go to second element inside container
+      </Link>
       <Element
         name="test7"
         className="element"
@@ -64,6 +71,14 @@ const Game = () => {
           }}
         >
           second element inside container
+        </Element>
+        <Element
+          name="third"
+          style={{
+            marginBottom: "200px",
+          }}
+        >
+          third thing
         </Element>
       </Element>
     </div>
