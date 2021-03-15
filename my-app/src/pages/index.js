@@ -7,6 +7,8 @@ import Experience from "../component/Experience";
 import Project from "../component/Project";
 import Contact from "../component/Contact";
 
+import Game from "../component/Game";
+
 const Main = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -22,6 +24,7 @@ const Main = () => {
       <About />
       <Experience />
       <Project />
+      <Game />
       <Contact />
     </>
   );
