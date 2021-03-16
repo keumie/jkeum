@@ -8,8 +8,8 @@ const About = () => {
   return (
     <Container>
       <Grid container direction="column" justify="center" alignItems="center">
-        <Header>about me</Header>
-        <Underline />
+        <Header data-aos="fade-right">about me</Header>
+        <Underline data-aos="fade-left" />
       </Grid>
       <CustomCard logo={profile} />
     </Container>

@@ -14,6 +14,7 @@ const useStyles = makeStyles({
     width: "100%",
     paddingTop: "60px",
     color: "white",
+    fontSize: "20px",
     "&:hover": {
       background: "none",
     },
@@ -30,10 +31,10 @@ const Contact = () => {
       }}
     >
       <Grid container direction="column" justify="center" alignItems="center">
-        <Header>contact</Header>
-        <Underline />
+        <Header data-aos="fade-left">contact</Header>
+        <Underline data-aos="fade-right" />
       </Grid>
-      <ContactContainer>
+      <ContactContainer data-aos="flip-right">
         <Grid container direction="column" justify="space-evenly" spacing={5}>
           <Grid item>
             <Social />
@@ -52,7 +53,7 @@ const Contact = () => {
         duration={700}
         offset={-80}
       >
-        <Button className={classes.button} disableRipple>
+        <Button className={classes.button} disableRipple data-aos="zoom-in-up">
           Back To Top
         </Button>
       </Link>

@@ -10,11 +10,11 @@ const Project = () => {
   return (
     <Container>
       <Grid container direction="column" justify="center" alignItems="center">
-        <Header>projects</Header>
-        <Underline />
+        <Header data-aos="fade-right">projects</Header>
+        <Underline data-aos="fade-left" />
       </Grid>
       <Grid container justify="space-evenly" alignItems="center">
-        <ImageContainer>
+        <ImageContainer data-aos="slide-right">
           <Image src={element} />
           <ImageText>
             <Text
@@ -27,7 +27,7 @@ const Project = () => {
             />
           </ImageText>
         </ImageContainer>
-        <ImageContainer>
+        <ImageContainer data-aos="slide-left">
           <Image src={website} />
           <ImageText>
             <Text

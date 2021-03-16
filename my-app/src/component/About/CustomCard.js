@@ -55,12 +55,14 @@ export const CustomCard = (props) => {
   const classes = useStyles();
 
   return (
-    <Card className={classes.root}>
-      <CardContent className={classes.text}>
-        <TextInfoContent />
-      </CardContent>
-      <CardMedia className={classes.media} image={logo} />
-    </Card>
+    <div data-aos="flip-up">
+      <Card className={classes.root}>
+        <CardContent className={classes.text}>
+          <TextInfoContent />
+        </CardContent>
+        <CardMedia className={classes.media} image={logo} />
+      </Card>
+    </div>
   );
 };
 
