@@ -7,9 +7,16 @@ import Divider from "./Divider";
 import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
 import { Link } from "react-scroll";
-import { ContactContainer } from "./ContactElement";
 
 const useStyles = makeStyles({
+  container: {
+    borderRadius: "16px",
+    boxShadow: "5px 5px 50px 5px rgba(0, 0, 0)",
+    padding: "30px",
+    background: "white",
+    margin: "auto",
+    width: "50%",
+  },
   button: {
     width: "100%",
     paddingTop: "60px",
@@ -34,7 +41,7 @@ const Contact = () => {
         <Header data-aos="fade-left">contact</Header>
         <Underline data-aos="fade-right" />
       </Grid>
-      <ContactContainer data-aos="flip-right">
+      <div data-aos="flip-right" className={classes.container}>
         <Grid container direction="column" justify="space-evenly" spacing={5}>
           <Grid item>
             <Social />
@@ -44,7 +51,7 @@ const Contact = () => {
             <Forms />
           </Grid>
         </Grid>
-      </ContactContainer>
+      </div>
       <Link
         activeClass="active"
         to="home"
