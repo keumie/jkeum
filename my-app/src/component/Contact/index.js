@@ -1,12 +1,6 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
-import {
-  Container,
-  Header,
-  Underline,
-  FadeLeft,
-  FadeRight,
-} from "../CommonElement";
+import { Container, Header, Underline } from "../CommonElement";
 import Forms from "./Forms";
 import Social from "./Social";
 import Divider from "./Divider";
@@ -36,12 +30,8 @@ const Contact = () => {
       }}
     >
       <Grid container direction="column" justify="center" alignItems="center">
-        <FadeRight>
-          <Header>contact</Header>
-        </FadeRight>
-        <FadeLeft>
-          <Underline />
-        </FadeLeft>
+        <Header>contact</Header>
+        <Underline />
       </Grid>
       <ContactContainer>
         <Grid container direction="column" justify="space-evenly" spacing={5}>
