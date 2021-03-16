@@ -49,13 +49,19 @@ const Test = (props) => {
       </Grid>
       <Grid container justify="flex-end" alignItems="center" spacing={2}>
         <Grid item>
-          <IconButton className={classes.button}>
-            <GitHubIcon fontSize="large" onClick={() => window.open(github)} />
+          <IconButton
+            className={classes.button}
+            onClick={() => window.open(github)}
+          >
+            <GitHubIcon fontSize="large" />
           </IconButton>
         </Grid>
         <Grid item>
-          <IconButton className={classes.button}>
-            <LaunchIcon fontSize="large" onClick={() => window.open(link)} />
+          <IconButton
+            className={classes.button}
+            onClick={() => window.open(link)}
+          >
+            <LaunchIcon fontSize="large" />
           </IconButton>
         </Grid>
       </Grid>

@@ -17,19 +17,19 @@ const Social = () => {
   return (
     <Grid container justify="center" alignItems="center" spacing={2}>
       <Grid item>
-        <IconButton className={classes.button}>
-          <GitHubIcon
-            fontSize="large"
-            onClick={() => window.open("https://github.com/keumie")}
-          />
+        <IconButton
+          className={classes.button}
+          onClick={() => window.open("https://github.com/keumie")}
+        >
+          <GitHubIcon fontSize="large" />
         </IconButton>
       </Grid>
       <Grid item>
-        <IconButton className={classes.button}>
-          <LinkedInIcon
-            fontSize="large"
-            onClick={() => window.open("https://www.linkedin.com/in/jkeum/")}
-          />
+        <IconButton
+          className={classes.button}
+          onClick={() => window.open("https://www.linkedin.com/in/jkeum/")}
+        >
+          <LinkedInIcon fontSize="large" />
         </IconButton>
       </Grid>
     </Grid>

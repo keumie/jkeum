@@ -18,12 +18,13 @@ const Description = ({ desc }) => {
   const classes = useStyles();
   return (
     <>
-      {desc.map((text) => (
+      {desc.map((text, index) => (
         <Grid
           container
           justify="flex-start"
           alignItems="flex-start"
           wrap="nowrap"
+          key={index}
         >
           <ArrowRightIcon />
           <Typography className={classes.body}>{text}</Typography>

@@ -28,8 +28,15 @@ const useStyles = makeStyles({
 });
 
 const generateList = (desc, classes) =>
-  desc.map((text) => (
-    <Grid container item xs={6} justify="flex-start" alignItems="center">
+  desc.map((text, index) => (
+    <Grid
+      container
+      item
+      xs={6}
+      justify="flex-start"
+      alignItems="center"
+      key={index}
+    >
       <ArrowRightIcon />
       <Typography className={classes.skill}>{text}</Typography>
     </Grid>
