@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+import { fadeInLeft, fadeInRight } from "react-animations";
 
 export const Container = styled.div`
   padding: 75px 10%;
@@ -17,4 +18,12 @@ export const Underline = styled.div`
   height: 4px;
   margin: 10px 0 75px 0;
   width: 100px;
+`;
+
+export const FadeLeft = styled.div`
+  animation: 1s ${keyframes`${fadeInLeft}`};
+`;
+
+export const FadeRight = styled.div`
+  animation: 1s ${keyframes`${fadeInRight}`};
 `;

@@ -6,7 +6,13 @@ import tatologo from "../../images/transpatologo.png";
 import trbhlogo from "../../images/transprbhlogo.png";
 import twmlogo from "../../images/transpwmlogo.png";
 import CustomCard from "./CustomCard";
-import { Container, Header, Underline } from "../CommonElement";
+import {
+  Container,
+  Header,
+  Underline,
+  FadeLeft,
+  FadeRight,
+} from "../CommonElement";
 
 const useStyles = makeStyles({
   root: {
@@ -49,8 +55,12 @@ const Experience = () => {
   return (
     <Container>
       <Grid container direction="column" justify="center" alignItems="center">
-        <Header>experience</Header>
-        <Underline />
+        <FadeRight>
+          <Header>experience</Header>
+        </FadeRight>
+        <FadeLeft>
+          <Underline />
+        </FadeLeft>
       </Grid>
       <Grid container spacing={2} className={classes.root}>
         <Grid item xs={12}>
