@@ -58,7 +58,6 @@ export const CustomCard = (props) => {
   const classes = useStyles();
   const width = useMediaQuery("(min-width:925px)");
 
-  console.log(width);
   return (
     <Card className={classes.root}>
       {width ? (
