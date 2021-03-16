@@ -12,7 +12,7 @@ const useStyles = makeStyles({
   },
 });
 
-const Link = () => {
+const Social = () => {
   const classes = useStyles();
   return (
     <Grid container justify="center" alignItems="center" spacing={2}>
@@ -36,4 +36,4 @@ const Link = () => {
   );
 };
 
-export default Link;
+export default Social;

@@ -6,6 +6,7 @@ import About from "../component/About";
 import Experience from "../component/Experience";
 import Project from "../component/Project";
 import Contact from "../component/Contact";
+import Footer from "../component/Footer";
 import { Element } from "react-scroll";
 
 const Main = () => {
@@ -34,6 +35,7 @@ const Main = () => {
       <Element name="contact">
         <Contact />
       </Element>
+      <Footer />
     </>
   );
 };
