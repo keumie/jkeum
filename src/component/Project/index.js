@@ -36,7 +36,7 @@ const Project = () => {
               description="A personal portfolio website to showcase my skillset for frontend development and market myself to the industry."
               task="Hosted on Github Pages, the website was created, designed, and developed from scratch."
               github="https://github.com/keumie/jkeum"
-              link=""
+              link="www.jkeum.net"
             />
           </ImageText>
         </ImageContainer>
