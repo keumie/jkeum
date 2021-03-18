@@ -4,6 +4,7 @@ import Card from "@material-ui/core/Card";
 import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import TextInfoContent from "./TextInfoContent";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -53,9 +54,10 @@ const useStyles = makeStyles((theme) => ({
 export const CustomCard = (props) => {
   const { logo } = props;
   const classes = useStyles();
+  const width = useMediaQuery("(min-width:700px)");
 
   return (
-    <div data-aos="flip-up">
+    <div data-aos={width ? "flip-up" : "flip-right"}>
       <Card className={classes.root}>
         <CardContent className={classes.text}>
           <TextInfoContent />
