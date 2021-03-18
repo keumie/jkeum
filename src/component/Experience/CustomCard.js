@@ -59,9 +59,9 @@ export const CustomCard = (props) => {
   const width = useMediaQuery("(min-width:925px)");
 
   return (
-    <Card className={classes.root}>
+    <>
       {width ? (
-        <>
+        <Card className={classes.root} data-aos="flip-up">
           <CardMedia className={classes.media} image={logo} />
           <CardContent className={classes.text}>
             <TextHeader
@@ -73,32 +73,34 @@ export const CustomCard = (props) => {
             />
             <Description desc={desc} />
           </CardContent>
-        </>
+        </Card>
       ) : (
-        <Grid
-          container
-          direction="column"
-          justify="flex-start"
-          alignItems="flex-start"
-        >
-          <Grid container justify="flex-start" alignItems="center">
-            <CardMedia className={classes.media} image={logo} />
+        <Card className={classes.root} data-aos="flip-left">
+          <Grid
+            container
+            direction="column"
+            justify="flex-start"
+            alignItems="flex-start"
+          >
+            <Grid container justify="flex-start" alignItems="center">
+              <CardMedia className={classes.media} image={logo} />
+              <CardContent className={classes.text}>
+                <TextHeader
+                  date={date}
+                  heading={heading}
+                  title={title}
+                  location={location}
+                  width={width}
+                />
+              </CardContent>
+            </Grid>
             <CardContent className={classes.text}>
-              <TextHeader
-                date={date}
-                heading={heading}
-                title={title}
-                location={location}
-                width={width}
-              />
+              <Description desc={desc} />
             </CardContent>
           </Grid>
-          <CardContent className={classes.text}>
-            <Description desc={desc} />
-          </CardContent>
-        </Grid>
+        </Card>
       )}
-    </Card>
+    </>
   );
 };
 
