@@ -19,7 +19,7 @@ const useStyles = makeStyles({
   },
   button: {
     width: "100%",
-    paddingTop: "60px",
+    padding: "60px 0px",
     color: "white",
     fontSize: "20px",
     "&:hover": {
@@ -60,7 +60,11 @@ const Contact = () => {
         duration={700}
         offset={-80}
       >
-        <Button className={classes.button} disableRipple data-aos="zoom-in-up">
+        <Button
+          className={classes.button}
+          disableRipple
+          data-aos="zoom-in-right"
+        >
           Back To Top
         </Button>
       </Link>

@@ -53,7 +53,7 @@ const Experience = () => {
         <Underline data-aos="fade-right" />
       </Grid>
       <Grid container spacing={2} className={classes.root}>
-        <Grid item xs={12} data-aos="flip-up">
+        <Grid item xs={12}>
           <CustomCard
             logo={tbgrslogo}
             date={"SEPT 2019  ~  DEC 2019  ||  JAN 2019  ~  APR 2019"}
@@ -64,7 +64,7 @@ const Experience = () => {
             location={"Toronto ON"}
           />
         </Grid>
-        <Grid item xs={12} data-aos="flip-up">
+        <Grid item xs={12}>
           <CustomCard
             logo={tatologo}
             date={"MAY 2018  ~  AUG 2018"}
@@ -75,7 +75,7 @@ const Experience = () => {
             location={"Mississauga ON"}
           />
         </Grid>
-        <Grid item xs={12} data-aos="flip-up">
+        <Grid item xs={12}>
           <CustomCard
             logo={trbhlogo}
             date={"JAN 2015  ~  APR 2015"}
@@ -86,7 +86,7 @@ const Experience = () => {
             location={"Toronto ON"}
           />
         </Grid>
-        <Grid item xs={12} data-aos="flip-up">
+        <Grid item xs={12}>
           <CustomCard
             logo={twmlogo}
             date={"JAN 2014  ~  APR 2014"}
