@@ -58,7 +58,7 @@ const Experience = () => {
             logo={tbgrslogo}
             date={"SEPT 2019  ~  DEC 2019  ||  JAN 2019  ~  APR 2019"}
             heading={"BGRS"}
-            title={"Software Developer"}
+            title={"Software Developer (Co-op)"}
             body={"asd"}
             desc={bgrsDesc}
             location={"Toronto ON"}
@@ -69,7 +69,7 @@ const Experience = () => {
             logo={tatologo}
             date={"MAY 2018  ~  AUG 2018"}
             heading={"Appliance TV Outlet"}
-            title={"Web Developer"}
+            title={"Web Developer (Co-op)"}
             body={"asd"}
             desc={atoDesc}
             location={"Mississauga ON"}
@@ -80,7 +80,7 @@ const Experience = () => {
             logo={trbhlogo}
             date={"JAN 2015  ~  APR 2015"}
             heading={"Rothman Bension & Hedges"}
-            title={"Application Developer"}
+            title={"Application Developer (Co-op)"}
             body={"asd"}
             desc={rbhDesc}
             location={"Toronto ON"}
@@ -91,7 +91,7 @@ const Experience = () => {
             logo={twmlogo}
             date={"JAN 2014  ~  APR 2014"}
             heading={"Work Market"}
-            title={"Mobile Developer"}
+            title={"Mobile Developer (Co-op)"}
             body={"asd"}
             desc={wmDesc}
             location={"Manhattan NY"}

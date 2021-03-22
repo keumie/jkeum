@@ -14,7 +14,7 @@ const Project = () => {
         <Underline data-aos="fade-left" />
       </Grid>
       <Grid container justify="space-evenly" alignItems="center">
-        <ImageContainer data-aos="slide-right">
+        <ImageContainer data-aos="flip-right">
           <Image src={element} />
           <ImageText>
             <Text
@@ -27,7 +27,7 @@ const Project = () => {
             />
           </ImageText>
         </ImageContainer>
-        <ImageContainer data-aos="slide-left">
+        <ImageContainer data-aos="flip-left">
           <Image src={website} />
           <ImageText>
             <Text
