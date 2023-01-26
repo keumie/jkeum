@@ -1,6 +1,7 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
+import ttreadlogo from "../../images/transptreadlogo.png";
 import tbgrslogo from "../../images/transpbgrslogo.png";
 import tatologo from "../../images/transpatologo.png";
 import trbhlogo from "../../images/transprbhlogo.png";
@@ -16,6 +17,13 @@ const useStyles = makeStyles({
 
 const Experience = () => {
   const classes = useStyles();
+
+  var treadDesc = [
+    "Optimized various aspects of the codebase to produce drastic improvements. Implemented using various techniques such as lazy loading, optimistic/pessimistic rendering, and virtualization",
+    "Led and worked on various projects delivering high-quality code that resulted in excellent customer feedback and usage",
+    "Advocated, compiled and implemented overdue frontend technical debt that helped maintainability, productivity and minimized the risk of bugs",
+    "Collaborated with UX/UI designers, project managers, and other engineers to deliver solutions and features",
+  ];
 
   var bgrsDesc = [
     "Significantly reduced input delay on pages with multiple form components",
@@ -55,11 +63,20 @@ const Experience = () => {
       <Grid container spacing={2} className={classes.root}>
         <Grid item xs={12}>
           <CustomCard
+            logo={ttreadlogo}
+            date={"JULY 2021  ~  PRESENT"}
+            heading={"Tread"}
+            title={"Software Engineer"}
+            desc={treadDesc}
+            location={"Remote"}
+          />
+        </Grid>
+        <Grid item xs={12}>
+          <CustomCard
             logo={tbgrslogo}
             date={"SEPT 2019  ~  DEC 2019  ||  JAN 2019  ~  APR 2019"}
             heading={"BGRS"}
             title={"Software Developer (Co-op)"}
-            body={"asd"}
             desc={bgrsDesc}
             location={"Toronto ON"}
           />
@@ -70,7 +87,6 @@ const Experience = () => {
             date={"MAY 2018  ~  AUG 2018"}
             heading={"Appliance TV Outlet"}
             title={"Web Developer (Co-op)"}
-            body={"asd"}
             desc={atoDesc}
             location={"Mississauga ON"}
           />
@@ -81,7 +97,6 @@ const Experience = () => {
             date={"JAN 2015  ~  APR 2015"}
             heading={"Rothman Bension & Hedges"}
             title={"Application Developer (Co-op)"}
-            body={"asd"}
             desc={rbhDesc}
             location={"Toronto ON"}
           />
@@ -92,7 +107,6 @@ const Experience = () => {
             date={"JAN 2014  ~  APR 2014"}
             heading={"Work Market"}
             title={"Mobile Developer (Co-op)"}
-            body={"asd"}
             desc={wmDesc}
             location={"Manhattan NY"}
           />
