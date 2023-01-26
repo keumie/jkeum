@@ -32,7 +32,9 @@ const Main = () => {
           WELCOME TO MY WEBSITE <br /> MY NAME IS
           <HomeName> JOEY KEUM</HomeName>
         </HomeH1>
-        <HomeP>I am a new graduate ready to tackle the world</HomeP>
+        <HomeP>
+          how did you end up here... anyways I hope you enjoy your stay :D
+        </HomeP>
         <HomeBtnWrapper>
           <Button
             activeClass="active"
