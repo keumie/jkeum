@@ -36,10 +36,18 @@ const useStyles = makeStyles({
       "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif",
     textTransform: "uppercase",
   },
+  tool: {
+    fontSize: 12,
+    fontWeight: "500",
+    marginBottom: "0.35em",
+    fontFamily:
+      "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif",
+    textTransform: "uppercase",
+  },
 });
 
 const TextHeader = (props) => {
-  const { date, heading, title, location, width } = props;
+  const { date, heading, title, location, tool, width } = props;
   const classes = useStyles();
 
   return (
@@ -58,6 +66,7 @@ const TextHeader = (props) => {
             <Typography className={classes.title}>{title}</Typography>
             <Typography className={classes.location}>{location}</Typography>
           </Grid>
+          <Typography className={classes.tool}>{tool}</Typography>
         </>
       ) : (
         <Grid
@@ -74,6 +83,7 @@ const TextHeader = (props) => {
           <Typography component={"span"} className={classes.date}>
             {date}
           </Typography>
+          <Typography className={classes.tool}>{tool}</Typography>
         </Grid>
       )}
     </>

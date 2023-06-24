@@ -33,8 +33,8 @@ const Project = () => {
             <Text
               title="Personal Website"
               tools="React, Javascript, HTML, CSS"
-              description="A personal portfolio website to showcase my skillset for frontend development and market myself to the industry."
-              task="Hosted on Github Pages, the website was created, designed, and developed from scratch."
+              description="Developed a personal portfolio website using React, JavaScript, HTML, and CSS, showcasing skills and projects."
+              task="Hosted on GitHub Pages. Designed an intuitive user interface, incorporated responsive design principles, and optimized performance"
               github="https://github.com/keumie/jkeum"
               link="https://www.jkeum.net"
             />

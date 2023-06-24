@@ -27,12 +27,12 @@ const useStyles = makeStyles({
   },
 });
 
-const generateList = (desc, classes) =>
-  desc.map((text, index) => (
+const generateList = (list, classes) =>
+  list.map((text, index) => (
     <Grid
       container
       item
-      xs={6}
+      xs={4}
       justify="flex-start"
       alignItems="center"
       key={index}
@@ -44,7 +44,19 @@ const generateList = (desc, classes) =>
 
 const TextInfoContent = () => {
   const classes = useStyles();
-  var desc = ["React", "Javascript", "HTML", "CSS", "Redux", "Java"];
+  const frontend = [
+    "React",
+    "Typescript",
+    "Javascript",
+    "HTML",
+    "CSS",
+    "Redux",
+    "Apollo GraphQL",
+  ];
+
+  const backend = ["Java", "Go"];
+
+  const database = ["PostgreSQL"];
 
   return (
     <>
@@ -57,26 +69,61 @@ const TextInfoContent = () => {
       <Typography className={classes.text} display="inline">
         and I am a software developer currently based in Canada.
         <br />
-        <br /> I enjoy creating and tinkering with various things that impact
-        the world ranging from simple tools to complex algorithms. My goal is to
-        build products that are both performance-driven and innovative.
         <br />
-        <br /> I graduated from the University of Waterloo with a Bachelor's in
-        Computer Engineering and currently working as a full-time software
-        engineer at Tread. My strengths and experience are focused on front-end
-        development, but I am also actively expanding my skill set to different
-        areas like back-end and full-stack development.
+        I am a highly skilled software engineer specializing in frontend
+        development, with expertise in React.js, Typescript, and JavaScript.
+        Known for my ability to optimize performance and create exceptional user
+        experiences, I have a track record of delivering innovative solutions
+        that increase platform usage and prioritize user needs. I excel at
+        collaborating with cross-functional teams and thrive both independently
+        and as a team player in delivering high-quality software solutions.
+        <br />
+        <br />
+        While my strengths primarily lie in frontend development, I am actively
+        expanding my skill set to include backend technologies such as Go and
+        PostgreSQL.
+        <br />
+        <br />
+        I am currently seeking a software engineering position where I can apply
+        my expertise to build intuitive and high-performance solutions. Please
+        reach out to discuss how I can contribute to your team.
         <br />
         <br />
         These are a few technologies that I have been working with recently:
+        <br />
+      </Typography>
+      <Typography className={classes.text} display="inline">
+        Frontend:
       </Typography>
       <Grid
         className={classes.skillContainer}
         container
-        justify="space-evenly"
+        justify="flex-start"
         alignItems="center"
       >
-        {generateList(desc, classes)}
+        {generateList(frontend, classes)}
+      </Grid>
+      <Typography className={classes.text} display="inline">
+        Backend:
+      </Typography>
+      <Grid
+        className={classes.skillContainer}
+        container
+        justify="flex-start"
+        alignItems="center"
+      >
+        {generateList(backend, classes)}
+      </Grid>
+      <Typography className={classes.text} display="inline">
+        Database:
+      </Typography>
+      <Grid
+        className={classes.skillContainer}
+        container
+        justify="flex-start"
+        alignItems="center"
+      >
+        {generateList(database, classes)}
       </Grid>
     </>
   );

@@ -32,9 +32,6 @@ const Main = () => {
           WELCOME TO MY WEBSITE <br /> MY NAME IS
           <HomeName> JOEY KEUM</HomeName>
         </HomeH1>
-        <HomeP>
-          how did you end up here... anyways I hope you enjoy your stay :D
-        </HomeP>
         <HomeBtnWrapper>
           <Button
             activeClass="active"
@@ -46,7 +43,7 @@ const Main = () => {
             onMouseEnter={onHover}
             onMouseLeave={onHover}
           >
-            <Typography>Get Started</Typography>
+            <Typography>Press Here To Get Started</Typography>
             {hover ? <ArrowDown /> : <ArrowRight />}
           </Button>
         </HomeBtnWrapper>

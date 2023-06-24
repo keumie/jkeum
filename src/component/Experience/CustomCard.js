@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export const CustomCard = (props) => {
-  const { logo, date, heading, title, desc, location } = props;
+  const { logo, date, heading, title, desc, location, tool } = props;
   const classes = useStyles();
   const width = useMediaQuery("(min-width:925px)");
 
@@ -70,6 +70,7 @@ export const CustomCard = (props) => {
               title={title}
               location={location}
               width={width}
+              tool={tool}
             />
             <Description desc={desc} />
           </CardContent>
@@ -91,6 +92,7 @@ export const CustomCard = (props) => {
                   title={title}
                   location={location}
                   width={width}
+                  tool={tool}
                 />
               </CardContent>
             </Grid>

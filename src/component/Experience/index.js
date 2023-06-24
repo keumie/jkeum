@@ -19,40 +19,39 @@ const Experience = () => {
   const classes = useStyles();
 
   var treadDesc = [
-    "Optimized various aspects of the codebase to produce drastic improvements. Implemented using various techniques such as lazy loading, optimistic/pessimistic rendering, and virtualization",
-    "Led and worked on various projects delivering high-quality code that resulted in excellent customer feedback and usage",
-    "Advocated, compiled and implemented overdue frontend technical debt that helped maintainability, productivity and minimized the risk of bugs",
-    "Collaborated with UX/UI designers, project managers, and other engineers to deliver solutions and features",
+    "Significantly dropped the render speed by 90% for a drag-and-drop driver scheduler from 3.1 seconds per action down to 0.3 seconds per action implementing strategies such as virtualization and optimistic rendering, resulting in a more responsive user interface.",
+    "Using Apollo GraphQL, strategized and executed a solution to continuously lazy load bulk page data to improve user experience and performance.",
+    "Led the development of an experimental feature addressing a client's main concern, resulting in an 11% increase in platform usage.",
+    "Advocated, compiled, and implemented overdue frontend technical debt which boosted productivity, increased maintainability, and reduced the chances of errors.",
+    "Collaborated with UX/UI designers, project managers, and other engineers to deliver solutions and features.",
   ];
 
   var bgrsDesc = [
-    "Significantly reduced input delay on pages with multiple form components",
-    "Enhanced and developed various features onto the notification bell as well as the notification page",
-    "Developed a feature to allow the website to be multilingual",
-    "Implemented various new UX/UI designs onto existing features and components",
-    "Altered multiple components throughout the website to be WCAG compliant",
-    "Integrated Google Analytics onto multiple features to track feature usage and usefulness",
+    "Significantly reduced input delay by 84% on pages with multiple form components from an average of 1.2 seconds per keystroke to 0.2 seconds per keystroke utilizing strategies such as debouncing.",
+    "Integrated Google Analytics into the ecosystem and designed an infrastructure to allow seamless hookups for future products and features.",
+    "Restructured the website to align with accessibility guidelines and meet all the requirements to be WCAG compliant.",
+    "Incorporated new UX/UI design into new and existing features and components throughout the platform.",
+    "Developed and debugged numerous features throughout the platform such as a notification, multilingual support, and various custom pages unique to the platform.",
   ];
 
   var atoDesc = [
-    "Implemented new UX/UI design to improve the current website's flow and readability",
-    "Developed various features throughout the website, such as item preview, contact-us form and newsletter",
-    "Investigated and resolved various outstanding backlogged bugs within the codebase",
+    "Designed and implemented new UX/UI to improve the current website's flow and readability.",
+    "Developed various features throughout the website, such as item preview, contact-us form, and newsletter.",
   ];
 
-  var rbhDesc = [
-    "Built various features onto the internal applications and debugged for bugs that arose",
-    "Worked alongside the financial department to automate financial reports that were due annually",
-    "Overlooked the ETL process for any errors or failures and came up with solutions if needed",
-  ];
+  // var rbhDesc = [
+  //   "Built various features onto the internal applications and debugged for bugs that arose",
+  //   "Worked alongside the financial department to automate financial reports that were due annually",
+  //   "Overlooked the ETL process for any errors or failures and came up with solutions if needed",
+  // ];
 
-  var wmDesc = [
-    "Discovered and fixed a major security bug within the application that allowed any user to access a stranger comment section despite being blocked or not being friends with the user",
-    "Optimized multiple different views to help improve performance and stability",
-    "Implemented the feature to view external documents directly on the mobile application",
-    "Developed the ability to allow for direct document downloads from the application instead of redirecting to a web application",
-    "Integrated new UX/UI to multiple different views to better fit the overall theme of the application",
-  ];
+  // var wmDesc = [
+  //   "Discovered and fixed a major security bug within the application that allowed any user to access a stranger comment section despite being blocked or not being friends with the user",
+  //   "Optimized multiple different views to help improve performance and stability",
+  //   "Implemented the feature to view external documents directly on the mobile application",
+  //   "Developed the ability to allow for direct document downloads from the application instead of redirecting to a web application",
+  //   "Integrated new UX/UI to multiple different views to better fit the overall theme of the application",
+  // ];
 
   return (
     <Container>
@@ -64,11 +63,14 @@ const Experience = () => {
         <Grid item xs={12}>
           <CustomCard
             logo={ttreadlogo}
-            date={"JULY 2021  ~  PRESENT"}
+            date={"JULY 2021  ~  MAR 2023"}
             heading={"Tread"}
             title={"Software Engineer"}
             desc={treadDesc}
-            location={"Remote"}
+            location={"Toronto, ON"}
+            tool={
+              "Tools: React.js, Typescript, GraphQL, HTML, CSS, Go, PostgreSQL"
+            }
           />
         </Grid>
         <Grid item xs={12}>
@@ -78,7 +80,8 @@ const Experience = () => {
             heading={"BGRS"}
             title={"Software Developer (Co-op)"}
             desc={bgrsDesc}
-            location={"Toronto ON"}
+            location={"Toronto, ON"}
+            tool={"Tools: React.js, Redux, Javascript, HTML, CSS, Node.js"}
           />
         </Grid>
         <Grid item xs={12}>
@@ -88,10 +91,11 @@ const Experience = () => {
             heading={"Appliance TV Outlet"}
             title={"Web Developer (Co-op)"}
             desc={atoDesc}
-            location={"Mississauga ON"}
+            location={"Mississauga, ON"}
+            tool={"Tools: HTML, CSS, PHP, Javascript"}
           />
         </Grid>
-        <Grid item xs={12}>
+        {/* <Grid item xs={12}>
           <CustomCard
             logo={trbhlogo}
             date={"JAN 2015  ~  APR 2015"}
@@ -110,7 +114,7 @@ const Experience = () => {
             desc={wmDesc}
             location={"Manhattan NY"}
           />
-        </Grid>
+        </Grid> */}
       </Grid>
     </Container>
   );
