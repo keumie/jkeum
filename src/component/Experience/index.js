@@ -1,6 +1,7 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
+import timaginelogo from "../../images/transimaginelogo.png";
 import ttreadlogo from "../../images/transptreadlogo.png";
 import tbgrslogo from "../../images/transpbgrslogo.png";
 import tatologo from "../../images/transpatologo.png";
@@ -18,26 +19,31 @@ const useStyles = makeStyles({
 const Experience = () => {
   const classes = useStyles();
 
+  var imagineDesc = [
+    "Reduced core grid operation speed by 99% by optimizing the underlying algorithm and resolving key bottlenecks.",
+    "Developed and maintained core across team playlist library, implementing key features that improved efficiency, consistency, and scalability.",
+    "Provided technical guidance to assist developers with adoption of the core internal library ensuring effective and consistent integration across teams.",
+    "Contributed to documentation for the internal library and its integration into client-facing features, ensuring clarity and maintainability for both new and existing functionality.",
+    "Assisted cross-team developers with frontend-related issues, offering technical guidance and best practices to improve code quality and efficiency.",
+  ];
+
   var treadDesc = [
-    "Significantly dropped the render speed by 90% for a drag-and-drop driver scheduler from 3.1 seconds per action down to 0.3 seconds per action implementing strategies such as virtualization and optimistic rendering, resulting in a more responsive user interface.",
-    "Using Apollo GraphQL, strategized and executed a solution to continuously lazy load bulk page data to improve user experience and performance.",
-    "Led the development of an experimental feature addressing a client's main concern, resulting in an 11% increase in platform usage.",
-    "Advocated, compiled, and implemented overdue frontend technical debt which boosted productivity, increased maintainability, and reduced the chances of errors.",
-    "Collaborated with UX/UI designers, project managers, and other engineers to deliver solutions and features.",
+    "Significantly improved the render speed by 90% for a drag-and-drop driver scheduler by implementing strategies such as virtualization and optimistic rendering.",
+    "Led the development of a feature, driving an 11% increase in client engagement on the platform.",
+    "Implemented an innovative Apollo GraphQL solution to optimize user experience and performance by continuously lazy loading bulk page data; reduced page load times by 50%",
+    "Advocated, compiled, and implemented frontend technical debt which boosted productivity, increased maintainability, and reduced the chances of errors.",
   ];
 
   var bgrsDesc = [
-    "Significantly reduced input delay by 84% on pages with multiple form components from an average of 1.2 seconds per keystroke to 0.2 seconds per keystroke utilizing strategies such as debouncing.",
+    "Significantly reduced input delay by 84% on pages with multiple form components utilizing strategies such as debouncing.",
     "Integrated Google Analytics into the ecosystem and designed an infrastructure to allow seamless hookups for future products and features.",
     "Restructured the website to align with accessibility guidelines and meet all the requirements to be WCAG compliant.",
-    "Incorporated new UX/UI design into new and existing features and components throughout the platform.",
-    "Developed and debugged numerous features throughout the platform such as a notification, multilingual support, and various custom pages unique to the platform.",
   ];
 
-  var atoDesc = [
-    "Designed and implemented new UX/UI to improve the current website's flow and readability.",
-    "Developed various features throughout the website, such as item preview, contact-us form, and newsletter.",
-  ];
+  // var atoDesc = [
+  //   "Designed and implemented new UX/UI to improve the current website's flow and readability.",
+  //   "Developed various features throughout the website, such as item preview, contact-us form, and newsletter.",
+  // ];
 
   // var rbhDesc = [
   //   "Built various features onto the internal applications and debugged for bugs that arose",
@@ -62,6 +68,17 @@ const Experience = () => {
       <Grid container spacing={2} className={classes.root}>
         <Grid item xs={12}>
           <CustomCard
+            logo={timaginelogo}
+            date={"JAN 2024  ~  PRESENT"}
+            heading={"Imagine Communication"}
+            title={"Frontend Software Developer"}
+            desc={imagineDesc}
+            location={"REMOTE"}
+            tool={"Tools: Typescript, AngularJS, VueJS, HTML, CSS"}
+          />
+        </Grid>
+        <Grid item xs={12}>
+          <CustomCard
             logo={ttreadlogo}
             date={"JULY 2021  ~  MAR 2023"}
             heading={"Tread"}
@@ -84,7 +101,7 @@ const Experience = () => {
             tool={"Tools: React.js, Redux, Javascript, HTML, CSS, Node.js"}
           />
         </Grid>
-        <Grid item xs={12}>
+        {/* <Grid item xs={12}>
           <CustomCard
             logo={tatologo}
             date={"MAY 2018  ~  AUG 2018"}
@@ -94,7 +111,7 @@ const Experience = () => {
             location={"Mississauga, ON"}
             tool={"Tools: HTML, CSS, PHP, Javascript"}
           />
-        </Grid>
+        </Grid> */}
         {/* <Grid item xs={12}>
           <CustomCard
             logo={trbhlogo}
