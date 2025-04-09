@@ -1,33 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.cfb10b29.chunk.css",
-    "main.js": "/static/js/main.2c366968.chunk.js",
-    "main.js.map": "/static/js/main.2c366968.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.406dd86f.js",
-    "runtime-main.js.map": "/static/js/runtime-main.406dd86f.js.map",
-    "static/css/2.30fbed10.chunk.css": "/static/css/2.30fbed10.chunk.css",
-    "static/js/2.2f7d1be9.chunk.js": "/static/js/2.2f7d1be9.chunk.js",
-    "static/js/2.2f7d1be9.chunk.js.map": "/static/js/2.2f7d1be9.chunk.js.map",
+    "main.css": "/static/css/main.b8b23d1e.css",
+    "main.js": "/static/js/main.9a7d6332.js",
+    "static/media/video.mp4": "/static/media/video.910e8a452197d2018756.mp4",
+    "static/media/ppic.jpg": "/static/media/ppic.cb6421ea406f09b38fa5.jpg",
+    "static/media/website.png": "/static/media/website.454f0e7dd611ec144312.png",
+    "static/media/element.png": "/static/media/element.811401f53ce4069ea032.png",
+    "static/media/background.jpg": "/static/media/background.2dbed037d41244cb26ca.jpg",
+    "static/media/transpbgrslogo.png": "/static/media/transpbgrslogo.f42859d31c87a8d24c77.png",
+    "static/media/transptreadlogo.png": "/static/media/transptreadlogo.e31f775c5a342008fe64.png",
+    "static/media/transpwmlogo.png": "/static/media/transpwmlogo.bfeb52e99617f2ff0161.png",
+    "static/media/transimaginelogo.png": "/static/media/transimaginelogo.e333129c0936b011a16c.png",
+    "static/media/transprbhlogo.png": "/static/media/transprbhlogo.f1b0f588d6f64379e79b.png",
+    "static/media/transpatologo.png": "/static/media/transpatologo.630ab84346be950722ad.png",
     "index.html": "/index.html",
-    "static/css/2.30fbed10.chunk.css.map": "/static/css/2.30fbed10.chunk.css.map",
-    "static/css/main.cfb10b29.chunk.css.map": "/static/css/main.cfb10b29.chunk.css.map",
-    "static/js/2.2f7d1be9.chunk.js.LICENSE.txt": "/static/js/2.2f7d1be9.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/static/media/background.2dbed037.jpg",
-    "static/media/element.811401f5.png": "/static/media/element.811401f5.png",
-    "static/media/ppic.cb6421ea.jpg": "/static/media/ppic.cb6421ea.jpg",
-    "static/media/transpatologo.630ab843.png": "/static/media/transpatologo.630ab843.png",
-    "static/media/transpbgrslogo.f42859d3.png": "/static/media/transpbgrslogo.f42859d3.png",
-    "static/media/transprbhlogo.f1b0f588.png": "/static/media/transprbhlogo.f1b0f588.png",
-    "static/media/transptreadlogo.e31f775c.png": "/static/media/transptreadlogo.e31f775c.png",
-    "static/media/transpwmlogo.bfeb52e9.png": "/static/media/transpwmlogo.bfeb52e9.png",
-    "static/media/video.910e8a45.mp4": "/static/media/video.910e8a45.mp4",
-    "static/media/website.454f0e7d.png": "/static/media/website.454f0e7d.png"
+    "main.b8b23d1e.css.map": "/static/css/main.b8b23d1e.css.map",
+    "main.9a7d6332.js.map": "/static/js/main.9a7d6332.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.406dd86f.js",
-    "static/css/2.30fbed10.chunk.css",
-    "static/js/2.2f7d1be9.chunk.js",
-    "static/css/main.cfb10b29.chunk.css",
-    "static/js/main.2c366968.chunk.js"
+    "static/css/main.b8b23d1e.css",
+    "static/js/main.9a7d6332.js"
   ]
 }
